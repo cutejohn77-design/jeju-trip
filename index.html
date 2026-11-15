@@ -1,0 +1,1660 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+<title>제주 4박 5일 가족여행 가이드 (2026.11.22~11.26)</title>
+<style>
+    :root {
+        --primary: #FF6F00;
+        --primary-dark: #E65100;
+        --ocean: #0277BD;
+        --bg: #F5F7FA;
+        --card: #FFFFFF;
+        --text: #1F2937;
+        --muted: #6B7280;
+        --border: #E5E7EB;
+    }
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        -webkit-tap-highlight-color: transparent;
+    }
+    body {
+        font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif;
+        background-color: var(--bg);
+        color: var(--text);
+        line-height: 1.5;
+        padding-bottom: 52px;
+    }
+    .container {
+        max-width: 600px;
+        margin: 0 auto;
+    }
+    header {
+        background: linear-gradient(135deg, #FF7043 0%, #FF9800 100%);
+        color: #fff;
+        padding: 22px 18px 18px;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        box-shadow: 0 4px 12px rgba(255, 111, 0, 0.22);
+    }
+    header h1 {
+        font-size: 1.28rem;
+        font-weight: 800;
+        letter-spacing: -0.02em;
+        margin-bottom: 6px;
+    }
+    .trip-summary {
+        font-size: 0.85rem;
+        opacity: 0.95;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px 12px;
+    }
+    .info-pills {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+        margin: 12px 14px 0;
+    }
+    .pill-card {
+        background: var(--card);
+        border-radius: 12px;
+        padding: 10px 12px;
+        border: 1px solid var(--border);
+        font-size: 0.79rem;
+    }
+    .pill-card strong {
+        display: block;
+        color: var(--ocean);
+        font-size: 0.78rem;
+        margin-bottom: 2px;
+    }
+    .tabs-wrapper {
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        background: rgba(245, 247, 250, 0.96);
+        backdrop-filter: blur(8px);
+        padding: 10px 14px;
+        border-bottom: 1px solid var(--border);
+        margin-top: 10px;
+    }
+    .tabs {
+        display: flex;
+        gap: 6px;
+        overflow-x: auto;
+        scrollbar-width: none;
+    }
+    .tabs::-webkit-scrollbar {
+        display: none;
+    }
+    .tab-btn {
+        flex: 0 0 auto;
+        border: 1px solid var(--border);
+        background: #fff;
+        color: var(--text);
+        padding: 7px 13px;
+        border-radius: 999px;
+        font-size: 0.83rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.15s ease;
+    }
+    .tab-btn.tab-special {
+        border-color: #FFCC80;
+        background: #FFF8F1;
+        color: #D84315;
+    }
+    .tab-btn.active {
+        background: var(--primary);
+        color: #fff;
+        border-color: var(--primary);
+        box-shadow: 0 2px 6px rgba(255, 111, 0, 0.3);
+    }
+    main {
+        padding: 12px 14px;
+    }
+    .day-section, .guide-section, .checklist-card {
+        background: var(--card);
+        border-radius: 16px;
+        padding: 16px;
+        margin-bottom: 16px;
+        border: 1px solid var(--border);
+        box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    }
+    .hidden {
+        display: none !important;
+    }
+    .day-header {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 10px;
+    }
+    .day-badge {
+        background: var(--ocean);
+        color: #fff;
+        font-weight: 800;
+        font-size: 0.75rem;
+        padding: 5px 9px;
+        border-radius: 8px;
+        letter-spacing: 0.03em;
+    }
+    .day-header h2 {
+        font-size: 1.05rem;
+        font-weight: 800;
+    }
+    .day-subtitle {
+        font-size: 0.82rem;
+        color: var(--muted);
+    }
+    .transport-bar {
+        background: #F0F7FF;
+        color: #0369A1;
+        font-size: 0.8rem;
+        font-weight: 600;
+        padding: 7px 10px;
+        border-radius: 8px;
+        margin-bottom: 14px;
+    }
+    .timeline {
+        display: flex;
+        flex-direction: column;
+    }
+    .schedule-item {
+        position: relative;
+        padding-left: 15px;
+        border-left: 2px solid #FFE0B2;
+        padding-bottom: 4px;
+    }
+    .schedule-item:last-child {
+        border-left-color: transparent;
+    }
+    .schedule-item::before {
+        content: "";
+        position: absolute;
+        left: -6px;
+        top: 5px;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: var(--primary);
+    }
+    .time-row {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin-bottom: 3px;
+    }
+    .time-text {
+        font-size: 0.82rem;
+        font-weight: 700;
+        color: var(--primary-dark);
+    }
+    .badge {
+        font-size: 0.72rem;
+        font-weight: 700;
+        padding: 2px 7px;
+        border-radius: 6px;
+    }
+    .place-title {
+        font-size: 0.98rem;
+        font-weight: 700;
+        margin-bottom: 3px;
+    }
+    .place-desc {
+        font-size: 0.85rem;
+        color: #374151;
+        margin-bottom: 4px;
+    }
+    .place-meta {
+        font-size: 0.78rem;
+        color: var(--muted);
+        margin-bottom: 8px;
+    }
+    .map-btns {
+        display: flex;
+        gap: 8px;
+    }
+    .btn-map {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        font-size: 0.78rem;
+        font-weight: 700;
+        padding: 6px 12px;
+        border-radius: 8px;
+        transition: opacity 0.15s;
+    }
+    .btn-map:active {
+        opacity: 0.75;
+    }
+    .btn-naver {
+        background: #03C75A;
+        color: #fff;
+    }
+    .btn-kakao {
+        background: #FEE500;
+        color: #191919;
+    }
+    .next-move-connector {
+        margin: 12px 0 14px;
+    }
+    .next-move-pill {
+        display: inline-block;
+        font-size: 0.77rem;
+        padding: 5px 10px;
+        border-radius: 8px;
+        border: 1px dashed;
+    }
+    .guide-intro {
+        font-size: 0.82rem;
+        color: var(--muted);
+        margin-bottom: 12px;
+    }
+    .sub-filter-bar {
+        display: flex;
+        gap: 6px;
+        overflow-x: auto;
+        scrollbar-width: none;
+        padding-bottom: 10px;
+        margin-bottom: 12px;
+        border-bottom: 1px solid var(--border);
+    }
+    .sub-filter-bar::-webkit-scrollbar {
+        display: none;
+    }
+    .sub-pill {
+        flex: 0 0 auto;
+        font-size: 0.77rem;
+        font-weight: 600;
+        padding: 5px 11px;
+        border-radius: 999px;
+        border: 1px solid var(--border);
+        background: #F9FAFB;
+        color: #4B5563;
+        cursor: pointer;
+    }
+    .sub-pill.active {
+        background: var(--ocean);
+        color: #fff;
+        border-color: var(--ocean);
+    }
+    .spot-list {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+    .spot-card {
+        border: 1px solid var(--border);
+        border-radius: 13px;
+        padding: 13px;
+        background: #FAFAFA;
+    }
+    .spot-top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 6px;
+        margin-bottom: 6px;
+    }
+    .spot-badges {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 5px;
+    }
+    .spot-num {
+        font-size: 0.74rem;
+        font-weight: 800;
+        color: #fff;
+        background: #374151;
+        padding: 2px 6px;
+        border-radius: 5px;
+    }
+    .fav-btn {
+        border: 1px solid #E5E7EB;
+        background: #fff;
+        color: #6B7280;
+        font-size: 0.75rem;
+        font-weight: 700;
+        padding: 3px 9px;
+        border-radius: 999px;
+        cursor: pointer;
+        flex-shrink: 0;
+    }
+    .fav-btn.saved {
+        background: #FFF1F2;
+        border-color: #FDA4AF;
+        color: #E11D48;
+    }
+    .spot-menu {
+        font-size: 0.81rem;
+        font-weight: 600;
+        color: var(--primary-dark);
+        background: #FFF7ED;
+        padding: 5px 9px;
+        border-radius: 7px;
+        margin-bottom: 6px;
+    }
+    .checklist-card h2 {
+        font-size: 1.05rem;
+        font-weight: 800;
+        margin-bottom: 10px;
+        color: var(--ocean);
+    }
+    .check-item {
+        display: flex;
+        align-items: flex-start;
+        gap: 10px;
+        padding: 9px 0;
+        border-bottom: 1px solid var(--border);
+        font-size: 0.86rem;
+        cursor: pointer;
+    }
+    .check-item:last-child {
+        border-bottom: none;
+    }
+    .check-item input {
+        margin-top: 3px;
+        width: 18px;
+        height: 18px;
+        accent-color: var(--primary);
+        flex-shrink: 0;
+    }
+    .check-item.checked span {
+        text-decoration: line-through;
+        color: var(--muted);
+    }
+</style>
+</head>
+<body>
+<div class="container">
+    <header>
+        <h1>🍊 제주 4박 5일 가족여행 가이드</h1>
+        <div class="trip-summary">
+            <span>📅 2026.11.22(일) ~ 11.26(목)</span>
+            <span>👨‍👩‍👦 성인 2 · 초6 학생 1</span>
+        </div>
+    </header>
+
+    <div class="info-pills">
+        <div class="pill-card">
+            <strong>✈️ 항공편</strong>
+            가는편 11/22 13:50 김포(국내선) → 15:05 제주<br>
+            오는편 11/26 16:40 제주 출발
+        </div>
+        <div class="pill-card">
+            <strong>🏨 숙소 & 렌터카</strong>
+            오션스위츠 제주호텔 (4박)<br>
+            렌트 11/23 09:00 ~ 11/26 14:30
+        </div>
+    </div>
+
+    <div class="tabs-wrapper">
+        <div class="tabs" id="dayTabs">
+            <button class="tab-btn active" data-filter="all">전체 일정</button>
+            <button class="tab-btn" data-filter="1">1일차(일)</button>
+            <button class="tab-btn" data-filter="2">2일차(월)</button>
+            <button class="tab-btn" data-filter="3">3일차(화)</button>
+            <button class="tab-btn" data-filter="4">4일차(수)</button>
+            <button class="tab-btn" data-filter="5">5일차(목)</button>
+            <button class="tab-btn tab-special" data-filter="food">🍽️ 필수 맛집</button>
+            <button class="tab-btn tab-special" data-filter="cafe">☕ 예쁜 카페</button>
+            <button class="tab-btn" data-filter="check">✅ 필수 체크</button>
+        </div>
+    </div>
+
+    <main>
+        
+    <section class="day-section" data-day="1">
+        <div class="day-header">
+            <div class="day-badge">DAY 1</div>
+            <div>
+                <h2>11월 22일 (일)</h2>
+                <div class="day-subtitle">제주 도착 · 동문시장 · 우무 디저트 · 탑동 노을 & 흑돼지</div>
+            </div>
+        </div>
+        <div class="transport-bar">🚗 렌터카 미이용 (공항→숙소 택시 1회, 이후 100% 도보 이동)</div>
+        <div class="timeline">
+            
+        <div class="schedule-item">
+            <div class="time-row">
+                <span class="time-text">13:50 ~ 15:05</span>
+                <span class="badge" style="background:#E3F2FD; color:#1565C0;">이동</span>
+            </div>
+            <div class="place-title">김포공항 국내선청사 출발 → 제주국제공항 도착</div>
+            <div class="place-desc">서울 강서구 하늘길 112 출발 · 제주 도착 후 수하물 수령 및 공항 택시 승강장에서 일반 택시 1대 탑승</div>
+            <div class="place-meta">성인 2 + 초6 1 (총 3인)</div>
+            <div class="map-btns">
+                <a href="https://map.naver.com/p/search/%EC%A0%9C%EC%A3%BC%EA%B5%AD%EC%A0%9C%EA%B3%B5%ED%95%AD" target="_blank" rel="noopener" class="btn-map btn-naver">네이버지도</a>
+                <a href="https://map.kakao.com/link/search/%EC%A0%9C%EC%A3%BC%EA%B5%AD%EC%A0%9C%EA%B3%B5%ED%95%AD" target="_blank" rel="noopener" class="btn-map btn-kakao">카카오맵</a>
+            </div>
+            
+            <div class="next-move-connector">
+                <div class="next-move-pill" style="background:#FEF7E0; color:#B06000; border-color:#FDE293;">
+                    <span>🚕 다음 스폿 이동: <strong>약 4.2km · 택시 약 12~15분 (약 6,500원)</strong></span>
+                </div>
+            </div>
+            
+        </div>
+        
+        <div class="schedule-item">
+            <div class="time-row">
+                <span class="time-text">15:35</span>
+                <span class="badge" style="background:#F3E5F5; color:#6A1B9A;">숙소</span>
+            </div>
+            <div class="place-title">오션스위츠 제주호텔 체크인</div>
+            <div class="place-desc">4박 연박 숙소. 탑동 해안가 위치로 재래시장·카페·맛집 모두 도보 이동 가능</div>
+            <div class="place-meta">제주시 탑동해안로 74</div>
+            <div class="map-btns">
+                <a href="https://map.naver.com/p/search/%EC%98%A4%EC%85%98%EC%8A%A4%EC%9C%84%EC%B8%A0%20%EC%A0%9C%EC%A3%BC%ED%98%B8%ED%85%94" target="_blank" rel="noopener" class="btn-map btn-naver">네이버지도</a>
+                <a href="https://map.kakao.com/link/search/%EC%98%A4%EC%85%98%EC%8A%A4%EC%9C%84%EC%B8%A0%20%EC%A0%9C%EC%A3%BC%ED%98%B8%ED%85%94" target="_blank" rel="noopener" class="btn-map btn-kakao">카카오맵</a>
+            </div>
+            
+            <div class="next-move-connector">
+                <div class="next-move-pill" style="background:#E6F4EA; color:#137333; border-color:#CEEAD6;">
+                    <span>🚶 다음 스폿 이동: <strong>약 850m · 산지천 산책로 따라 도보 11~12분</strong></span>
+                </div>
+            </div>
+            
+        </div>
+        
+        <div class="schedule-item">
+            <div class="time-row">
+                <span class="time-text">16:10 ~ 17:15</span>
+                <span class="badge" style="background:#FCE4EC; color:#C2185B;">관광·쇼핑</span>
+            </div>
+            <div class="place-title">동문재래시장 & 산지천 물길 산책</div>
+            <div class="place-desc">호텔에서 걸어서 11분 거리의 제주 대표 재래시장 구경 및 주전부리</div>
+            <div class="place-meta">제주시 관덕로14길 20 (실내 아케이드)</div>
+            <div class="map-btns">
+                <a href="https://map.naver.com/p/search/%EB%8F%99%EB%AC%B8%EC%9E%AC%EB%9E%98%EC%8B%9C%EC%9E%A5" target="_blank" rel="noopener" class="btn-map btn-naver">네이버지도</a>
+                <a href="https://map.kakao.com/link/search/%EB%8F%99%EB%AC%B8%EC%9E%AC%EB%9E%98%EC%8B%9C%EC%9E%A5" target="_blank" rel="noopener" class="btn-map btn-kakao">카카오맵</a>
+            </div>
+            
+            <div class="next-move-connector">
+                <div class="next-move-pill" style="background:#E6F4EA; color:#137333; border-color:#CEEAD6;">
+                    <span>🚶 다음 스폿 이동: <strong>약 400m · 도보 5~6분</strong></span>
+                </div>
+            </div>
+            
+        </div>
+        
+        <div class="schedule-item">
+            <div class="time-row">
+                <span class="time-text">17:20 ~ 17:55</span>
+                <span class="badge" style="background:#F3E5F5; color:#7B1FA2;">예쁜카페</span>
+            </div>
+            <div class="place-title">우무 (제주 관덕로점) & 원도심 산책</div>
+            <div class="place-desc">제주 우뭇가사리로 만든 탱글탱글한 커스터드·말차 푸딩 맛집! 아기자기한 외관 앞 기념사진 명소</div>
+            <div class="place-meta">대표: 커스터드 푸딩·말차 푸딩 | 매일 09:00~20:00</div>
+            <div class="map-btns">
+                <a href="https://map.naver.com/p/search/%EC%A0%9C%EC%A3%BC%20%EC%9A%B0%EB%AC%B4%20%EA%B4%80%EB%8D%95%EB%A1%9C%EC%A0%90" target="_blank" rel="noopener" class="btn-map btn-naver">네이버지도</a>
+                <a href="https://map.kakao.com/link/search/%EC%A0%9C%EC%A3%BC%20%EC%9A%B0%EB%AC%B4%20%EA%B4%80%EB%8D%95%EB%A1%9C%EC%A0%90" target="_blank" rel="noopener" class="btn-map btn-kakao">카카오맵</a>
+            </div>
+            
+            <div class="next-move-connector">
+                <div class="next-move-pill" style="background:#E6F4EA; color:#137333; border-color:#CEEAD6;">
+                    <span>🚶 다음 스폿 이동: <strong>약 650m · 도보 9분</strong></span>
+                </div>
+            </div>
+            
+        </div>
+        
+        <div class="schedule-item">
+            <div class="time-row">
+                <span class="time-text">18:05 ~ 18:25</span>
+                <span class="badge" style="background:#E8F5E9; color:#2E7D32;">관광·산책</span>
+            </div>
+            <div class="place-title">탑동 해변 산책로 (일몰 감상)</div>
+            <div class="place-desc">탁 트인 제주 바다 위로 붉게 물드는 노을과 비행기 풍경 감상</div>
+            <div class="place-meta">숙소 바로 앞 해안 산책로</div>
+            <div class="map-btns">
+                <a href="https://map.naver.com/p/search/%EC%A0%9C%EC%A3%BC%ED%95%B4%EB%B3%80%EA%B3%B5%EC%97%B0%EC%9E%A5" target="_blank" rel="noopener" class="btn-map btn-naver">네이버지도</a>
+                <a href="https://map.kakao.com/link/search/%EC%A0%9C%EC%A3%BC%ED%95%B4%EB%B3%80%EA%B3%B5%EC%97%B0%EC%9E%A5" target="_blank" rel="noopener" class="btn-map btn-kakao">카카오맵</a>
+            </div>
+            
+            <div class="next-move-connector">
+                <div class="next-move-pill" style="background:#E6F4EA; color:#137333; border-color:#CEEAD6;">
+                    <span>🚶 다음 스폿 이동: <strong>약 450m · 도보 6~7분</strong></span>
+                </div>
+            </div>
+            
+        </div>
+        
+        <div class="schedule-item">
+            <div class="time-row">
+                <span class="time-text">18:30</span>
+                <span class="badge" style="background:#FFEBEE; color:#C62828;">필수맛집</span>
+            </div>
+            <div class="place-title">돔베돈 (흑돼지 전문점)</div>
+            <div class="place-desc">탑동 흑돼지거리 대표 맛집. 직원이 직접 구워주어 초6 아이와 편하게 식사 가능 (식사 후 숙소까지 500m · 도보 7분)</div>
+            <div class="place-meta">대표: 흑돼지 근고기·오겹살 | 매일 11:00~22:30 (일 정상영업)</div>
+            <div class="map-btns">
+                <a href="https://map.naver.com/p/search/%EC%A0%9C%EC%A3%BC%20%EB%8F%94%EB%B2%A0%EB%8F%88" target="_blank" rel="noopener" class="btn-map btn-naver">네이버지도</a>
+                <a href="https://map.kakao.com/link/search/%EC%A0%9C%EC%A3%BC%20%EB%8F%94%EB%B2%A0%EB%8F%88" target="_blank" rel="noopener" class="btn-map btn-kakao">카카오맵</a>
+            </div>
+            
+        </div>
+        
+        </div>
+    </section>
+    
+    <section class="day-section" data-day="2">
+        <div class="day-header">
+            <div class="day-badge">DAY 2</div>
+            <div>
+                <h2>11월 23일 (월)</h2>
+                <div class="day-subtitle">에코랜드 기차 · 제주 레일바이크 · 세화 오션뷰 카페 · 명진전복</div>
+            </div>
+        </div>
+        <div class="transport-bar">🚗 아침 도보 이동 → 09:00 렌터카 픽업 (중형 세단 / 준중형 SUV)</div>
+        <div class="timeline">
+            
+        <div class="schedule-item">
+            <div class="time-row">
+                <span class="time-text">08:00</span>
+                <span class="badge" style="background:#E0F7FA; color:#00838F;">아침(도보)</span>
+            </div>
+            <div class="place-title">대춘해장국 본점 (대안: 도보 2분 이삭토스트 탑동점)</div>
+            <div class="place-desc">렌터카 픽업 전 차 없이 걸어가는 제주 도민 해장국 맛집. 아이용 맑은 국물 요청 가능</div>
+            <div class="place-meta">대표: 소고기해장국·내장탕 | 매일 06:00~15:00</div>
+            <div class="map-btns">
+                <a href="https://map.naver.com/p/search/%EC%A0%9C%EC%A3%BC%20%EB%8C%80%EC%B6%98%ED%95%B4%EC%9E%A5%EA%B5%AD%20%EB%B3%B8%EC%A0%90" target="_blank" rel="noopener" class="btn-map btn-naver">네이버지도</a>
+                <a href="https://map.kakao.com/link/search/%EC%A0%9C%EC%A3%BC%20%EB%8C%80%EC%B6%98%ED%95%B4%EC%9E%A5%EA%B5%AD%20%EB%B3%B8%EC%A0%90" target="_blank" rel="noopener" class="btn-map btn-kakao">카카오맵</a>
+            </div>
+            
+            <div class="next-move-connector">
+                <div class="next-move-pill" style="background:#FEF7E0; color:#B06000; border-color:#FDE293;">
+                    <span>🚕 다음 스폿 이동: <strong>약 4.0km · 택시 약 10~12분 (호텔 경유 시 약 4.2km)</strong></span>
+                </div>
+            </div>
+            
+        </div>
+        
+        <div class="schedule-item">
+            <div class="time-row">
+                <span class="time-text">09:00</span>
+                <span class="badge" style="background:#E3F2FD; color:#1565C0;">이동</span>
+            </div>
+            <div class="place-title">공항 인근 렌터카 픽업</div>
+            <div class="place-desc">3인 가족과 캐리어 적재가 여유로운 중형 세단(K5·쏘나타) 또는 준중형 SUV(셀토스·스포티지) 인수</div>
+            <div class="place-meta">운전면허증 필수 지참</div>
+            <div class="map-btns">
+                <a href="https://map.naver.com/p/search/%EC%A0%9C%EC%A3%BC%EA%B5%AD%EC%A0%9C%EA%B3%B5%ED%95%AD%20%EB%A0%8C%ED%84%B0%EC%B9%B4%ED%95%98%EC%9A%B0%EC%8A%A4" target="_blank" rel="noopener" class="btn-map btn-naver">네이버지도</a>
+                <a href="https://map.kakao.com/link/search/%EC%A0%9C%EC%A3%BC%EA%B5%AD%EC%A0%9C%EA%B3%B5%ED%95%AD%20%EB%A0%8C%ED%84%B0%EC%B9%B4%ED%95%98%EC%9A%B0%EC%8A%A4" target="_blank" rel="noopener" class="btn-map btn-kakao">카카오맵</a>
+            </div>
+            
+            <div class="next-move-connector">
+                <div class="next-move-pill" style="background:#E8F0FE; color:#1967D2; border-color:#D2E3FC;">
+                    <span>🚙 다음 스폿 이동: <strong>약 21.5km · 차량 약 30~35분</strong></span>
+                </div>
+            </div>
+            
+        </div>
+        
+        <div class="schedule-item">
+            <div class="time-row">
+                <span class="time-text">10:00 ~ 11:50</span>
+                <span class="badge" style="background:#FFF3E0; color:#E65100;">액티비티</span>
+            </div>
+            <div class="place-title">에코랜드 테마파크 (곶자왈 증기기관차)</div>
+            <div class="place-desc">1800년대 증기기관차 모양 기차를 타고 곶자왈 원시림을 달리며 역마다 호수 산책로·풍차 탐험</div>
+            <div class="place-meta">조천읍 번영로 1278-169</div>
+            <div class="map-btns">
+                <a href="https://map.naver.com/p/search/%EC%97%90%EC%BD%94%EB%9E%9C%EB%93%9C%20%ED%85%8C%EB%A7%88%ED%8C%8C%ED%81%AC" target="_blank" rel="noopener" class="btn-map btn-naver">네이버지도</a>
+                <a href="https://map.kakao.com/link/search/%EC%97%90%EC%BD%94%EB%9E%9C%EB%93%9C%20%ED%85%8C%EB%A7%88%ED%8C%8C%ED%81%AC" target="_blank" rel="noopener" class="btn-map btn-kakao">카카오맵</a>
+            </div>
+            
+            <div class="next-move-connector">
+                <div class="next-move-pill" style="background:#E8F0FE; color:#1967D2; border-color:#D2E3FC;">
+                    <span>🚙 다음 스폿 이동: <strong>약 2.8km · 차량 약 5분</strong></span>
+                </div>
+            </div>
+            
+        </div>
+        
+        <div class="schedule-item">
+            <div class="time-row">
+                <span class="time-text">12:00</span>
+                <span class="badge" style="background:#FFEBEE; color:#C62828;">필수맛집</span>
+            </div>
+            <div class="place-title">성미가든 (대안: 원조교래손칼국수)</div>
+            <div class="place-desc">닭가슴살 샤브샤브·백숙·녹두죽 코스로 나와 초6 아이도 맛있게 먹기 좋은 보양식 맛집</div>
+            <div class="place-meta">대표: 토종닭 샤브샤브 | 11:00~19:30 (월 정상영업, 목 휴무)</div>
+            <div class="map-btns">
+                <a href="https://map.naver.com/p/search/%EC%A0%9C%EC%A3%BC%20%EC%84%B1%EB%AF%B8%EA%B0%80%EB%93%A0" target="_blank" rel="noopener" class="btn-map btn-naver">네이버지도</a>
+                <a href="https://map.kakao.com/link/search/%EC%A0%9C%EC%A3%BC%20%EC%84%B1%EB%AF%B8%EA%B0%80%EB%93%A0" target="_blank" rel="noopener" class="btn-map btn-kakao">카카오맵</a>
+            </div>
+            
+            <div class="next-move-connector">
+                <div class="next-move-pill" style="background:#E8F0FE; color:#1967D2; border-color:#D2E3FC;">
+                    <span>🚙 다음 스폿 이동: <strong>약 14.5km · 차량 약 18~20분</strong></span>
+                </div>
+            </div>
+            
+        </div>
+        
+        <div class="schedule-item">
+            <div class="time-row">
+                <span class="time-text">13:30 ~ 14:45</span>
+                <span class="badge" style="background:#FFF3E0; color:#E65100;">액티비티</span>
+            </div>
+            <div class="place-title">제주 레일바이크 (오름·초원 라이딩)</div>
+            <div class="place-desc">용눈이오름과 다랑쉬오름의 탁 트인 풍경 속을 세 가족이 함께 페달을 밟아 달리는 인기 체험 액티비티</div>
+            <div class="place-meta">구좌읍 용눈이오름로 641</div>
+            <div class="map-btns">
+                <a href="https://map.naver.com/p/search/%EC%A0%9C%EC%A3%BC%EB%A0%88%EC%9D%BC%EB%B0%94%EC%9D%B4%ED%81%AC" target="_blank" rel="noopener" class="btn-map btn-naver">네이버지도</a>
+                <a href="https://map.kakao.com/link/search/%EC%A0%9C%EC%A3%BC%EB%A0%88%EC%9D%BC%EB%B0%94%EC%9D%B4%ED%81%AC" target="_blank" rel="noopener" class="btn-map btn-kakao">카카오맵</a>
+            </div>
+            
+            <div class="next-move-connector">
+                <div class="next-move-pill" style="background:#E8F0FE; color:#1967D2; border-color:#D2E3FC;">
+                    <span>🚙 다음 스폿 이동: <strong>약 11.5km · 차량 약 15분</strong></span>
+                </div>
+            </div>
+            
+        </div>
+        
+        <div class="schedule-item">
+            <div class="time-row">
+                <span class="time-text">15:05 ~ 16:45</span>
+                <span class="badge" style="background:#F3E5F5; color:#7B1FA2;">예쁜카페</span>
+            </div>
+            <div class="place-title">월정리 해변 & 카페 한라산 (세화 액자 오션뷰)</div>
+            <div class="place-desc">에메랄드빛 월정리·세화 바다를 통창으로 액자처럼 담아낸 감성 오션뷰 카페에서 달콤한 디저트와 휴식</div>
+            <div class="place-meta">추천: 한라산 슈페너·당근 케이크 | 09:30~18:00 (수 휴무)</div>
+            <div class="map-btns">
+                <a href="https://map.naver.com/p/search/%EC%84%B8%ED%99%94%20%EC%B9%B4%ED%8E%98%20%ED%95%9C%EB%9D%BC%EC%82%B0" target="_blank" rel="noopener" class="btn-map btn-naver">네이버지도</a>
+                <a href="https://map.kakao.com/link/search/%EC%84%B8%ED%99%94%20%EC%B9%B4%ED%8E%98%20%ED%95%9C%EB%9D%BC%EC%82%B0" target="_blank" rel="noopener" class="btn-map btn-kakao">카카오맵</a>
+            </div>
+            
+            <div class="next-move-connector">
+                <div class="next-move-pill" style="background:#E8F0FE; color:#1967D2; border-color:#D2E3FC;">
+                    <span>🚙 다음 스폿 이동: <strong>약 2.5km · 차량 약 4~5분</strong></span>
+                </div>
+            </div>
+            
+        </div>
+        
+        <div class="schedule-item">
+            <div class="time-row">
+                <span class="time-text">17:00</span>
+                <span class="badge" style="background:#FFEBEE; color:#C62828;">필수맛집</span>
+            </div>
+            <div class="place-title">명진전복 (이른 저녁)</div>
+            <div class="place-desc">고소한 전복돌솥밥과 전복구이로 저녁 식사! (제주시 복귀 길목에 동복리 런던베이글뮤지엄 위치 · 숙소까지 약 29.5km · 42분)</div>
+            <div class="place-meta">대표: 전복돌솥밥·전복구이·전복죽 | 09:30~20:30 (월 정상영업, 화 휴무)</div>
+            <div class="map-btns">
+                <a href="https://map.naver.com/p/search/%EC%A0%9C%EC%A3%BC%20%EB%AA%85%EC%A7%84%EC%A0%84%EB%B3%B5" target="_blank" rel="noopener" class="btn-map btn-naver">네이버지도</a>
+                <a href="https://map.kakao.com/link/search/%EC%A0%9C%EC%A3%BC%20%EB%AA%85%EC%A7%84%EC%A0%84%EB%B3%B5" target="_blank" rel="noopener" class="btn-map btn-kakao">카카오맵</a>
+            </div>
+            
+        </div>
+        
+        </div>
+    </section>
+    
+    <section class="day-section" data-day="3">
+        <div class="day-header">
+            <div class="day-badge">DAY 3</div>
+            <div>
+                <h2>11월 24일 (화)</h2>
+                <div class="day-subtitle">항공우주박물관 · 춘심이네 · 마라도 잠수함 · 원앤온리 카페 · 감귤 체험</div>
+            </div>
+        </div>
+        <div class="transport-bar">🚗 아침 호텔 도보권 식당 → 서남부(안덕·중문) 차량 집중 동선</div>
+        <div class="timeline">
+            
+        <div class="schedule-item">
+            <div class="time-row">
+                <span class="time-text">08:30</span>
+                <span class="badge" style="background:#E0F7FA; color:#00838F;">아침(도보)</span>
+            </div>
+            <div class="place-title">제주김만복 동문시장점 (대안: 도보 14분 김희선제주몸국)</div>
+            <div class="place-desc">호텔에서 걸어서 12분(850m) 거리. 아이가 먹기 좋은 전복김밥·통전복주먹밥으로 간편하고 든든하게 아침 해결</div>
+            <div class="place-meta">대표: 만복이네 김밥·통전복주먹밥 | 매일 08:00~20:00</div>
+            <div class="map-btns">
+                <a href="https://map.naver.com/p/search/%EC%A0%9C%EC%A3%BC%EA%B9%80%EB%A7%8C%EB%B3%B5%20%EB%8F%99%EB%AC%B8%EC%8B%9C%EC%9E%A5%EC%A0%90" target="_blank" rel="noopener" class="btn-map btn-naver">네이버지도</a>
+                <a href="https://map.kakao.com/link/search/%EC%A0%9C%EC%A3%BC%EA%B9%80%EB%A7%8C%EB%B3%B5%20%EB%8F%99%EB%AC%B8%EC%8B%9C%EC%9E%A5%EC%A0%90" target="_blank" rel="noopener" class="btn-map btn-kakao">카카오맵</a>
+            </div>
+            
+            <div class="next-move-connector">
+                <div class="next-move-pill" style="background:#E8F0FE; color:#1967D2; border-color:#D2E3FC;">
+                    <span>🚙 다음 스폿 이동: <strong>호텔 출발 기준 약 36.5km · 차량 약 45~50분 (평화로)</strong></span>
+                </div>
+            </div>
+            
+        </div>
+        
+        <div class="schedule-item">
+            <div class="time-row">
+                <span class="time-text">10:00 ~ 11:50</span>
+                <span class="badge" style="background:#FFF3E0; color:#E65100;">액티비티</span>
+            </div>
+            <div class="place-title">제주항공우주박물관 (비행·우주 시뮬레이터)</div>
+            <div class="place-desc">실제 전투기·항공기 전시와 비행 원리 조작 코너, 우주 탐사 시뮬레이터 등 초6 맞춤 과학 액티비티</div>
+            <div class="place-meta">안덕면 녹차분재로 218</div>
+            <div class="map-btns">
+                <a href="https://map.naver.com/p/search/%EC%A0%9C%EC%A3%BC%ED%95%AD%EA%B3%B5%EC%9A%B0%EC%A3%BC%EB%B0%95%EB%AC%BC%EA%B4%80" target="_blank" rel="noopener" class="btn-map btn-naver">네이버지도</a>
+                <a href="https://map.kakao.com/link/search/%EC%A0%9C%EC%A3%BC%ED%95%AD%EA%B3%B5%EC%9A%B0%EC%A3%BC%EB%B0%95%EB%AC%BC%EA%B4%80" target="_blank" rel="noopener" class="btn-map btn-kakao">카카오맵</a>
+            </div>
+            
+            <div class="next-move-connector">
+                <div class="next-move-pill" style="background:#E8F0FE; color:#1967D2; border-color:#D2E3FC;">
+                    <span>🚙 다음 스폿 이동: <strong>약 6.2km · 차량 약 10분</strong></span>
+                </div>
+            </div>
+            
+        </div>
+        
+        <div class="schedule-item">
+            <div class="time-row">
+                <span class="time-text">12:05</span>
+                <span class="badge" style="background:#FFEBEE; color:#C62828;">필수맛집</span>
+            </div>
+            <div class="place-title">춘심이네 본점 (대안: 중문 도로변 로컬맛집 제주오성)</div>
+            <div class="place-desc">직원이 갈치 가시를 먹기 좋게 발라주어 초등학생 동반 가족 식사에 특히 편리</div>
+            <div class="place-meta">대표: 통갈치구이·갈치조림 | 11:00~16:00, 17:00~20:00 (화 정상영업)</div>
+            <div class="map-btns">
+                <a href="https://map.naver.com/p/search/%EC%A0%9C%EC%A3%BC%20%EC%B6%98%EC%8B%AC%EC%9D%B4%EB%84%A4%20%EB%B3%B8%EC%A0%90" target="_blank" rel="noopener" class="btn-map btn-naver">네이버지도</a>
+                <a href="https://map.kakao.com/link/search/%EC%A0%9C%EC%A3%BC%20%EC%B6%98%EC%8B%AC%EC%9D%B4%EB%84%A4%20%EB%B3%B8%EC%A0%90" target="_blank" rel="noopener" class="btn-map btn-kakao">카카오맵</a>
+            </div>
+            
+            <div class="next-move-connector">
+                <div class="next-move-pill" style="background:#E8F0FE; color:#1967D2; border-color:#D2E3FC;">
+                    <span>🚙 다음 스폿 이동: <strong>약 8.5km · 차량 약 12~14분</strong></span>
+                </div>
+            </div>
+            
+        </div>
+        
+        <div class="schedule-item">
+            <div class="time-row">
+                <span class="time-text">13:40 ~ 15:10</span>
+                <span class="badge" style="background:#FFF3E0; color:#E65100;">액티비티</span>
+            </div>
+            <div class="place-title">마라도 잠수함 (14:00 항차 바닷속 탐험)</div>
+            <div class="place-desc">출발 20분 전(13:40) 선착장 도착 필수! 수심 30~40m 연산호와 물고기 떼 관람. 전원 신분증(초6은 등본/여권) 지참</div>
+            <div class="place-meta">안덕면 형제해안로 32 | 오전 출발 전 운항 여부 전화 확인</div>
+            <div class="map-btns">
+                <a href="https://map.naver.com/p/search/%EB%A7%88%EB%9D%BC%EB%8F%84%EC%9E%A0%EC%88%98%ED%95%A8" target="_blank" rel="noopener" class="btn-map btn-naver">네이버지도</a>
+                <a href="https://map.kakao.com/link/search/%EB%A7%88%EB%9D%BC%EB%8F%84%EC%9E%A0%EC%88%98%ED%95%A8" target="_blank" rel="noopener" class="btn-map btn-kakao">카카오맵</a>
+            </div>
+            
+            <div class="next-move-connector">
+                <div class="next-move-pill" style="background:#E8F0FE; color:#1967D2; border-color:#D2E3FC;">
+                    <span>🚙 다음 스폿 이동: <strong>약 1.8km · 차량 약 4분</strong></span>
+                </div>
+            </div>
+            
+        </div>
+        
+        <div class="schedule-item">
+            <div class="time-row">
+                <span class="time-text">15:20 ~ 16:15</span>
+                <span class="badge" style="background:#F3E5F5; color:#7B1FA2;">예쁜카페</span>
+            </div>
+            <div class="place-title">원앤온리 (산방산 절벽 & 바다 절경 카페)</div>
+            <div class="place-desc">잠수함 선착장 바로 옆! 뒤로는 웅장한 산방산 절벽, 앞으로는 황우치 해변 파도가 펼쳐지는 압도적 뷰 맛집</div>
+            <div class="place-meta">추천: 산방산 크림라떼·망고 빙수 | 매일 09:00~19:00</div>
+            <div class="map-btns">
+                <a href="https://map.naver.com/p/search/%EC%84%9C%EA%B7%80%ED%8F%AC%20%EC%9B%90%EC%95%A4%EC%98%A8%EB%A6%AC" target="_blank" rel="noopener" class="btn-map btn-naver">네이버지도</a>
+                <a href="https://map.kakao.com/link/search/%EC%84%9C%EA%B7%80%ED%8F%AC%20%EC%9B%90%EC%95%A4%EC%98%A8%EB%A6%AC" target="_blank" rel="noopener" class="btn-map btn-kakao">카카오맵</a>
+            </div>
+            
+            <div class="next-move-connector">
+                <div class="next-move-pill" style="background:#E8F0FE; color:#1967D2; border-color:#D2E3FC;">
+                    <span>🚙 다음 스폿 이동: <strong>약 7.5km · 차량 약 12분</strong></span>
+                </div>
+            </div>
+            
+        </div>
+        
+        <div class="schedule-item">
+            <div class="time-row">
+                <span class="time-text">16:30 ~ 17:30</span>
+                <span class="badge" style="background:#FFF3E0; color:#E65100;">액티비티</span>
+            </div>
+            <div class="place-title">서귀포 노지 감귤따기 체험</div>
+            <div class="place-desc">11월 하순 가장 달콤한 제철 노지 감귤을 직접 수확해 시식하고 한 상자씩 포장</div>
+            <div class="place-meta">안덕·중문 복귀 방향 체험 농장</div>
+            <div class="map-btns">
+                <a href="https://map.naver.com/p/search/%EC%84%9C%EA%B7%80%ED%8F%AC%20%EA%B0%90%EA%B7%A4%EB%94%B0%EA%B8%B0%20%EC%B2%B4%ED%97%98" target="_blank" rel="noopener" class="btn-map btn-naver">네이버지도</a>
+                <a href="https://map.kakao.com/link/search/%EC%84%9C%EA%B7%80%ED%8F%AC%20%EA%B0%90%EA%B7%A4%EB%94%B0%EA%B8%B0%20%EC%B2%B4%ED%97%98" target="_blank" rel="noopener" class="btn-map btn-kakao">카카오맵</a>
+            </div>
+            
+            <div class="next-move-connector">
+                <div class="next-move-pill" style="background:#E8F0FE; color:#1967D2; border-color:#D2E3FC;">
+                    <span>🚙 다음 스폿 이동: <strong>약 6.0km · 차량 약 10분</strong></span>
+                </div>
+            </div>
+            
+        </div>
+        
+        <div class="schedule-item">
+            <div class="time-row">
+                <span class="time-text">17:45</span>
+                <span class="badge" style="background:#FFEBEE; color:#C62828;">필수맛집</span>
+            </div>
+            <div class="place-title">숙성도 중문점</div>
+            <div class="place-desc">제주 대표 숙성 흑돼지 맛집! (체험 종료 전 원격 줄서기 앱 대기 권장 · 식사 후 숙소까지 약 38.5km · 50분)</div>
+            <div class="place-meta">대표: 숙성 뼈등심·뼈목살 | 매일 11:30~21:00</div>
+            <div class="map-btns">
+                <a href="https://map.naver.com/p/search/%EC%88%99%EC%84%B1%EB%8F%84%20%EC%A4%91%EB%AC%B8%EC%A0%90" target="_blank" rel="noopener" class="btn-map btn-naver">네이버지도</a>
+                <a href="https://map.kakao.com/link/search/%EC%88%99%EC%84%B1%EB%8F%84%20%EC%A4%91%EB%AC%B8%EC%A0%90" target="_blank" rel="noopener" class="btn-map btn-kakao">카카오맵</a>
+            </div>
+            
+        </div>
+        
+        </div>
+    </section>
+    
+    <section class="day-section" data-day="4">
+        <div class="day-header">
+            <div class="day-badge">DAY 4</div>
+            <div>
+                <h2>11월 25일 (수)</h2>
+                <div class="day-subtitle">우진해장국 · 9.81 파크 레이싱 · 액티브파크 · 애월 예쁜 카페 & 일몰</div>
+            </div>
+        </div>
+        <div class="transport-bar">🚗 렌터카 3일차 (서부 애월·한림 더블 액티비티 + 오션뷰 카페 코스)</div>
+        <div class="timeline">
+            
+        <div class="schedule-item">
+            <div class="time-row">
+                <span class="time-text">08:30</span>
+                <span class="badge" style="background:#FFEBEE; color:#C62828;">필수맛집</span>
+            </div>
+            <div class="place-title">우진해장국 (제주시 대표 향토 맛집)</div>
+            <div class="place-desc">진한 제주 고사리육개장 명가! 아이가 먹기 좋은 맑은 사골해장국과 바삭한 녹두빈대떡도 준비되어 있음</div>
+            <div class="place-meta">대표: 제주고사리육개장·사골해장국 | 매일 06:00~22:00</div>
+            <div class="map-btns">
+                <a href="https://map.naver.com/p/search/%EC%A0%9C%EC%A3%BC%20%EC%9A%B0%EC%A7%84%ED%95%B4%EC%9E%A5%EA%B5%AD" target="_blank" rel="noopener" class="btn-map btn-naver">네이버지도</a>
+                <a href="https://map.kakao.com/link/search/%EC%A0%9C%EC%A3%BC%20%EC%9A%B0%EC%A7%84%ED%95%B4%EC%9E%A5%EA%B5%AD" target="_blank" rel="noopener" class="btn-map btn-kakao">카카오맵</a>
+            </div>
+            
+            <div class="next-move-connector">
+                <div class="next-move-pill" style="background:#E8F0FE; color:#1967D2; border-color:#D2E3FC;">
+                    <span>🚙 다음 스폿 이동: <strong>약 19.5km · 차량 약 25분</strong></span>
+                </div>
+            </div>
+            
+        </div>
+        
+        <div class="schedule-item">
+            <div class="time-row">
+                <span class="time-text">09:45 ~ 11:45</span>
+                <span class="badge" style="background:#FFF3E0; color:#E65100;">액티비티</span>
+            </div>
+            <div class="place-title">9.81 파크 제주 (중력 레이싱 & 실내 스포츠랩)</div>
+            <div class="place-desc">초등학교 6학년 만족도 1위! 중력 가속도 무동력 카트 트랙 주행과 실내 스크린·레이저 스포츠 게임까지 풀코스 액티비티</div>
+            <div class="place-meta">애월읍 천덕로 880-24</div>
+            <div class="map-btns">
+                <a href="https://map.naver.com/p/search/9.81%20%ED%8C%8C%ED%81%AC" target="_blank" rel="noopener" class="btn-map btn-naver">네이버지도</a>
+                <a href="https://map.kakao.com/link/search/9.81%20%ED%8C%8C%ED%81%AC" target="_blank" rel="noopener" class="btn-map btn-kakao">카카오맵</a>
+            </div>
+            
+            <div class="next-move-connector">
+                <div class="next-move-pill" style="background:#E8F0FE; color:#1967D2; border-color:#D2E3FC;">
+                    <span>🚙 다음 스폿 이동: <strong>약 13.5km · 차량 약 18분</strong></span>
+                </div>
+            </div>
+            
+        </div>
+        
+        <div class="schedule-item">
+            <div class="time-row">
+                <span class="time-text">12:05</span>
+                <span class="badge" style="background:#FFEBEE; color:#C62828;">필수맛집</span>
+            </div>
+            <div class="place-title">수우동 (대안: 한림 명랑스낵 분식)</div>
+            <div class="place-desc">협재·금능 바다 전망 맛집. 수제 돈가스와 자작냉우동이 인기 (방문 전 예약 앱 확인 권장)</div>
+            <div class="place-meta">대표: 자작냉우동·수제 돈가스 | 10:30~16:00 (수 정상영업, 화 휴무)</div>
+            <div class="map-btns">
+                <a href="https://map.naver.com/p/search/%EC%A0%9C%EC%A3%BC%20%EC%88%98%EC%9A%B0%EB%8F%99" target="_blank" rel="noopener" class="btn-map btn-naver">네이버지도</a>
+                <a href="https://map.kakao.com/link/search/%EC%A0%9C%EC%A3%BC%20%EC%88%98%EC%9A%B0%EB%8F%99" target="_blank" rel="noopener" class="btn-map btn-kakao">카카오맵</a>
+            </div>
+            
+            <div class="next-move-connector">
+                <div class="next-move-pill" style="background:#E8F0FE; color:#1967D2; border-color:#D2E3FC;">
+                    <span>🚙 다음 스폿 이동: <strong>약 2.5km · 차량 약 5분</strong></span>
+                </div>
+            </div>
+            
+        </div>
+        
+        <div class="schedule-item">
+            <div class="time-row">
+                <span class="time-text">13:30 ~ 15:20</span>
+                <span class="badge" style="background:#FFF3E0; color:#E65100;">액티비티</span>
+            </div>
+            <div class="place-title">액티브파크 제주 (실내 클라이밍 & 챌린지)</div>
+            <div class="place-desc">형형색색 테마 암벽을 오르는 클립앤클라임(실내 클라이밍)과 공중 챌린지 코스로 신나게 몸을 움직이는 액티비티</div>
+            <div class="place-meta">한림읍 금능남로 76</div>
+            <div class="map-btns">
+                <a href="https://map.naver.com/p/search/%EC%95%A1%ED%8B%B0%EB%B8%8C%ED%8C%8C%ED%81%AC%20%EC%A0%9C%EC%A3%BC" target="_blank" rel="noopener" class="btn-map btn-naver">네이버지도</a>
+                <a href="https://map.kakao.com/link/search/%EC%95%A1%ED%8B%B0%EB%B8%8C%ED%8C%8C%ED%81%AC%20%EC%A0%9C%EC%A3%BC" target="_blank" rel="noopener" class="btn-map btn-kakao">카카오맵</a>
+            </div>
+            
+            <div class="next-move-connector">
+                <div class="next-move-pill" style="background:#E8F0FE; color:#1967D2; border-color:#D2E3FC;">
+                    <span>🚙 다음 스폿 이동: <strong>약 15.0km · 해안도로 차량 약 20분</strong></span>
+                </div>
+            </div>
+            
+        </div>
+        
+        <div class="schedule-item">
+            <div class="time-row">
+                <span class="time-text">15:45 ~ 17:30</span>
+                <span class="badge" style="background:#F3E5F5; color:#7B1FA2;">예쁜카페</span>
+            </div>
+            <div class="place-title">애월 한담해안산책로 & 하이엔드 제주 / 노티드 애월</div>
+            <div class="place-desc">에메랄드빛 한담해변 산책 후 야자수 테라스·루프탑 오션뷰 베이커리(하이엔드 제주) 또는 크림 도넛 맛집(노티드 애월)에서 일몰 감상</div>
+            <div class="place-meta">추천: 현무암 크림빵·우유생크림 도넛 | 매일 09:00~21:00</div>
+            <div class="map-btns">
+                <a href="https://map.naver.com/p/search/%ED%95%98%EC%9D%B4%EC%97%94%EB%93%9C%20%EC%A0%9C%EC%A3%BC" target="_blank" rel="noopener" class="btn-map btn-naver">네이버지도</a>
+                <a href="https://map.kakao.com/link/search/%ED%95%98%EC%9D%B4%EC%97%94%EB%93%9C%20%EC%A0%9C%EC%A3%BC" target="_blank" rel="noopener" class="btn-map btn-kakao">카카오맵</a>
+            </div>
+            
+            <div class="next-move-connector">
+                <div class="next-move-pill" style="background:#E8F0FE; color:#1967D2; border-color:#D2E3FC;">
+                    <span>🚙 다음 스폿 이동: <strong>약 4.2km · 차량 약 7분</strong></span>
+                </div>
+            </div>
+            
+        </div>
+        
+        <div class="schedule-item">
+            <div class="time-row">
+                <span class="time-text">17:45</span>
+                <span class="badge" style="background:#FFEBEE; color:#C62828;">필수맛집</span>
+            </div>
+            <div class="place-title">제주광해 애월본점</div>
+            <div class="place-desc">갈치조림 주문 시 고소한 고등어구이가 함께 제공되어 가족 식사로 만족도 높음 (식사 후 숙소까지 약 15.5km · 23분)</div>
+            <div class="place-meta">대표: 갈치조림+고등어구이 세트 | 매일 10:00~20:00</div>
+            <div class="map-btns">
+                <a href="https://map.naver.com/p/search/%EC%A0%9C%EC%A3%BC%EA%B4%91%ED%95%B4%20%EC%95%A0%EC%9B%94%EB%B3%B8%EC%A0%90" target="_blank" rel="noopener" class="btn-map btn-naver">네이버지도</a>
+                <a href="https://map.kakao.com/link/search/%EC%A0%9C%EC%A3%BC%EA%B4%91%ED%95%B4%20%EC%95%A0%EC%9B%94%EB%B3%B8%EC%A0%90" target="_blank" rel="noopener" class="btn-map btn-kakao">카카오맵</a>
+            </div>
+            
+        </div>
+        
+        </div>
+    </section>
+    
+    <section class="day-section" data-day="5">
+        <div class="day-header">
+            <div class="day-badge">DAY 5</div>
+            <div>
+                <h2>11월 26일 (목)</h2>
+                <div class="day-subtitle">한라수목원 · 동문시장 쇼핑 · 자매국수 · 무지개해안도로 카페 · 귀가</div>
+            </div>
+        </div>
+        <div class="transport-bar">🚗 렌터카 반납 (14:30) → 16:40 제주 출발</div>
+        <div class="timeline">
+            
+        <div class="schedule-item">
+            <div class="time-row">
+                <span class="time-text">09:00</span>
+                <span class="badge" style="background:#FFF8E1; color:#F57F17;">아침</span>
+            </div>
+            <div class="place-title">모이세해장국본점</div>
+            <div class="place-desc">체크아웃 후 한라수목원 방면 이동 길목의 아침 식사 맛집. 아이용 맑은 설렁탕 메뉴 보유</div>
+            <div class="place-meta">대표: 소고기해장국·설렁탕 | 연중무휴 24시간</div>
+            <div class="map-btns">
+                <a href="https://map.naver.com/p/search/%EC%A0%9C%EC%A3%BC%20%EB%AA%A8%EC%9D%B4%EC%84%B8%ED%95%B4%EC%9E%A5%EA%B5%AD%20%EB%B3%B8%EC%A0%90" target="_blank" rel="noopener" class="btn-map btn-naver">네이버지도</a>
+                <a href="https://map.kakao.com/link/search/%EC%A0%9C%EC%A3%BC%20%EB%AA%A8%EC%9D%B4%EC%84%B8%ED%95%B4%EC%9E%A5%EA%B5%AD%20%EB%B3%B8%EC%A0%90" target="_blank" rel="noopener" class="btn-map btn-kakao">카카오맵</a>
+            </div>
+            
+            <div class="next-move-connector">
+                <div class="next-move-pill" style="background:#E8F0FE; color:#1967D2; border-color:#D2E3FC;">
+                    <span>🚙 다음 스폿 이동: <strong>약 2.6km · 차량 약 6분</strong></span>
+                </div>
+            </div>
+            
+        </div>
+        
+        <div class="schedule-item">
+            <div class="time-row">
+                <span class="time-text">10:00 ~ 11:00</span>
+                <span class="badge" style="background:#E8F5E9; color:#2E7D32;">관광·산책</span>
+            </div>
+            <div class="place-title">한라수목원</div>
+            <div class="place-desc">맑은 숲길을 가볍게 산책하며 여행 마지막 날 아침의 여유 만끽</div>
+            <div class="place-meta">제주시 수목원길 72</div>
+            <div class="map-btns">
+                <a href="https://map.naver.com/p/search/%ED%95%9C%EB%9D%BC%EC%88%98%EB%AA%A9%EC%9B%90" target="_blank" rel="noopener" class="btn-map btn-naver">네이버지도</a>
+                <a href="https://map.kakao.com/link/search/%ED%95%9C%EB%9D%BC%EC%88%98%EB%AA%A9%EC%9B%90" target="_blank" rel="noopener" class="btn-map btn-kakao">카카오맵</a>
+            </div>
+            
+            <div class="next-move-connector">
+                <div class="next-move-pill" style="background:#E8F0FE; color:#1967D2; border-color:#D2E3FC;">
+                    <span>🚙 다음 스폿 이동: <strong>약 6.8km · 차량 약 15~18분</strong></span>
+                </div>
+            </div>
+            
+        </div>
+        
+        <div class="schedule-item">
+            <div class="time-row">
+                <span class="time-text">11:20 ~ 12:15</span>
+                <span class="badge" style="background:#FCE4EC; color:#C2185B;">쇼핑</span>
+            </div>
+            <div class="place-title">동문재래시장 (기념품 쇼핑)</div>
+            <div class="place-desc">오메기떡, 감귤 초콜릿, 한라봉 등 가족·지인 귀가 선물 구입</div>
+            <div class="place-meta">제주시 관덕로14길 20</div>
+            <div class="map-btns">
+                <a href="https://map.naver.com/p/search/%EB%8F%99%EB%AC%B8%EC%9E%AC%EB%9E%98%EC%8B%9C%EC%9E%A5" target="_blank" rel="noopener" class="btn-map btn-naver">네이버지도</a>
+                <a href="https://map.kakao.com/link/search/%EB%8F%99%EB%AC%B8%EC%9E%AC%EB%9E%98%EC%8B%9C%EC%9E%A5" target="_blank" rel="noopener" class="btn-map btn-kakao">카카오맵</a>
+            </div>
+            
+            <div class="next-move-connector">
+                <div class="next-move-pill" style="background:#E8F0FE; color:#1967D2; border-color:#D2E3FC;">
+                    <span>🚙 다음 스폿 이동: <strong>약 6.2km · 차량 약 14분</strong></span>
+                </div>
+            </div>
+            
+        </div>
+        
+        <div class="schedule-item">
+            <div class="time-row">
+                <span class="time-text">12:35</span>
+                <span class="badge" style="background:#FFEBEE; color:#C62828;">필수맛집</span>
+            </div>
+            <div class="place-title">자매국수 (공항 인근 대표 고기국수 맛집)</div>
+            <div class="place-desc">잡내 없이 진한 돼지 사골 육수의 고기국수와 부드러운 돔베고기로 여행 마지막 한 끼 완성</div>
+            <div class="place-meta">대표: 고기국수·비빔국수·돔베고기 | 09:00~18:00 (목 정상영업)</div>
+            <div class="map-btns">
+                <a href="https://map.naver.com/p/search/%EC%A0%9C%EC%A3%BC%20%EC%9E%90%EB%A7%A4%EA%B5%AD%EC%88%98" target="_blank" rel="noopener" class="btn-map btn-naver">네이버지도</a>
+                <a href="https://map.kakao.com/link/search/%EC%A0%9C%EC%A3%BC%20%EC%9E%90%EB%A7%A4%EA%B5%AD%EC%88%98" target="_blank" rel="noopener" class="btn-map btn-kakao">카카오맵</a>
+            </div>
+            
+            <div class="next-move-connector">
+                <div class="next-move-pill" style="background:#E8F0FE; color:#1967D2; border-color:#D2E3FC;">
+                    <span>🚙 다음 스폿 이동: <strong>약 3.5km · 차량 약 8분</strong></span>
+                </div>
+            </div>
+            
+        </div>
+        
+        <div class="schedule-item">
+            <div class="time-row">
+                <span class="time-text">13:45 ~ 14:20</span>
+                <span class="badge" style="background:#F3E5F5; color:#7B1FA2;">예쁜카페</span>
+            </div>
+            <div class="place-title">도두동 무지개해안도로 & 오션뷰 카페</div>
+            <div class="place-desc">공항 바로 옆 알록달록 방호벽 해안도로에서 마지막 가족 기념사진과 커피 한 잔의 여유</div>
+            <div class="place-meta">제주시 도두일동 해안도로</div>
+            <div class="map-btns">
+                <a href="https://map.naver.com/p/search/%EB%8F%84%EB%91%90%EB%8F%99%20%EB%AC%B4%EC%A7%80%EA%B0%9C%ED%95%B4%EC%95%88%EB%8F%84%EB%A1%9C" target="_blank" rel="noopener" class="btn-map btn-naver">네이버지도</a>
+                <a href="https://map.kakao.com/link/search/%EB%8F%84%EB%91%90%EB%8F%99%20%EB%AC%B4%EC%A7%80%EA%B0%9C%ED%95%B4%EC%95%88%EB%8F%84%EB%A1%9C" target="_blank" rel="noopener" class="btn-map btn-kakao">카카오맵</a>
+            </div>
+            
+            <div class="next-move-connector">
+                <div class="next-move-pill" style="background:#E8F0FE; color:#1967D2; border-color:#D2E3FC;">
+                    <span>🚙 다음 스폿 이동: <strong>약 2.2km · 차량 약 6분</strong></span>
+                </div>
+            </div>
+            
+        </div>
+        
+        <div class="schedule-item">
+            <div class="time-row">
+                <span class="time-text">14:30</span>
+                <span class="badge" style="background:#E3F2FD; color:#1565C0;">이동</span>
+            </div>
+            <div class="place-title">렌터카 반납 & 제주국제공항 이동</div>
+            <div class="place-desc">렌터카 반납 후 셔틀버스로 공항 이동, 16:40 김포행 항공편 탑승 수속</div>
+            <div class="place-meta">16:40 제주 출발 → 김포 도착</div>
+            <div class="map-btns">
+                <a href="https://map.naver.com/p/search/%EC%A0%9C%EC%A3%BC%EA%B5%AD%EC%A0%9C%EA%B3%B5%ED%95%AD" target="_blank" rel="noopener" class="btn-map btn-naver">네이버지도</a>
+                <a href="https://map.kakao.com/link/search/%EC%A0%9C%EC%A3%BC%EA%B5%AD%EC%A0%9C%EA%B3%B5%ED%95%AD" target="_blank" rel="noopener" class="btn-map btn-kakao">카카오맵</a>
+            </div>
+            
+        </div>
+        
+        </div>
+    </section>
+    
+
+        <section class="guide-section hidden" id="foodSection">
+            <div class="day-header">
+                <div class="day-badge" style="background:#D84315;">BEST FOOD</div>
+                <div>
+                    <h2>제주 가면 꼭 가야 할 최고 맛집</h2>
+                    <div class="day-subtitle">일정 포함 맛집 + 추가 선택 가능한 제주 대표 10선</div>
+                </div>
+            </div>
+            <p class="guide-intro">권역별 버튼을 눌러 현재 위치 근처 맛집을 바로 찾거나, 마음에 드는 곳을 <strong>♡ 찜</strong> 해두세요.</p>
+            <div class="sub-filter-bar" data-target="foodList">
+                <button class="sub-pill active" data-sub="all">전체 (10)</button>
+                <button class="sub-pill" data-sub="jeju">제주시·공항</button>
+                <button class="sub-pill" data-sub="seogwipo">서귀포·중문</button>
+                <button class="sub-pill" data-sub="eastwest">동부·서부</button>
+                <button class="sub-pill" data-sub="fav">❤️ 찜한 곳</button>
+            </div>
+            <div class="spot-list" id="foodList">
+                
+        <div class="spot-card" data-region="jeju" data-spot-id="r1">
+            <div class="spot-top">
+                <div class="spot-badges">
+                    <span class="spot-num">01</span>
+                    <span class="badge" style="background:#E0F2FE; color:#0369A1;">제주시·공항</span>
+                    <span class="badge" style="background:#FFEBEE; color:#C62828;">숙성 흑돼지</span>
+                </div>
+                <button type="button" class="fav-btn" data-fav-id="r1" aria-label="찜하기">♡ 찜</button>
+            </div>
+            <div class="place-title">숙성도 본점</div>
+            <div class="place-desc">제주 숙성 흑돼지의 대명사. 직원이 두툼한 뼈등심·뼈목살을 처음부터 끝까지 구워주어 초6 아이와 함께 편하게 최고급 육즙을 맛볼 수 있습니다.</div>
+            <div class="spot-menu">대표: 720숙성 뼈등심, 뼈목살, 갈치속젓 볶음밥</div>
+            <div class="place-meta">📍 제주시 원노형로 41 | 매일 11:30~21:30 (원격 줄서기 앱 권장)</div>
+            <div class="map-btns">
+                <a href="https://map.naver.com/p/search/%EC%A0%9C%EC%A3%BC%20%EC%88%99%EC%84%B1%EB%8F%84%20%EB%B3%B8%EC%A0%90" target="_blank" rel="noopener" class="btn-map btn-naver">네이버지도</a>
+                <a href="https://map.kakao.com/link/search/%EC%A0%9C%EC%A3%BC%20%EC%88%99%EC%84%B1%EB%8F%84%20%EB%B3%B8%EC%A0%90" target="_blank" rel="noopener" class="btn-map btn-kakao">카카오맵</a>
+            </div>
+        </div>
+        
+        <div class="spot-card" data-region="jeju" data-spot-id="r2">
+            <div class="spot-top">
+                <div class="spot-badges">
+                    <span class="spot-num">02</span>
+                    <span class="badge" style="background:#E0F2FE; color:#0369A1;">제주시·공항</span>
+                    <span class="badge" style="background:#FFEBEE; color:#C62828;">연탄 흑돼지</span>
+                </div>
+                <button type="button" class="fav-btn" data-fav-id="r2" aria-label="찜하기">♡ 찜</button>
+            </div>
+            <div class="place-title">돈사돈 본점</div>
+            <div class="place-desc">두툼한 제주 근고기를 연탄불에 초벌해 겉바속촉으로 구워주는 원조 흑돼지 맛집. 멜젓과 함께 먹는 쫄깃한 목살·오겹살이 일품입니다.</div>
+            <div class="spot-menu">대표: 흑돼지 근고기(목살·오겹살), 김치찌개</div>
+            <div class="place-meta">📍 제주시 우평로 19 | 12:00~21:30 (화요일 휴무)</div>
+            <div class="map-btns">
+                <a href="https://map.naver.com/p/search/%EC%A0%9C%EC%A3%BC%20%EB%8F%88%EC%82%AC%EB%8F%88%20%EB%B3%B8%EC%A0%90" target="_blank" rel="noopener" class="btn-map btn-naver">네이버지도</a>
+                <a href="https://map.kakao.com/link/search/%EC%A0%9C%EC%A3%BC%20%EB%8F%88%EC%82%AC%EB%8F%88%20%EB%B3%B8%EC%A0%90" target="_blank" rel="noopener" class="btn-map btn-kakao">카카오맵</a>
+            </div>
+        </div>
+        
+        <div class="spot-card" data-region="jeju" data-spot-id="r3">
+            <div class="spot-top">
+                <div class="spot-badges">
+                    <span class="spot-num">03</span>
+                    <span class="badge" style="background:#E0F2FE; color:#0369A1;">제주시·공항</span>
+                    <span class="badge" style="background:#FFEBEE; color:#C62828;">제주 향토음식</span>
+                </div>
+                <button type="button" class="fav-btn" data-fav-id="r3" aria-label="찜하기">♡ 찜</button>
+            </div>
+            <div class="place-title">우진해장국 (4일차 일정 포함)</div>
+            <div class="place-desc">곱게 간 고사리와 돼지고기를 진하게 끓여낸 제주식 고사리육개장 명가. 아이를 위한 맑은 사골해장국과 바삭한 녹두빈대떡도 인기가 높습니다.</div>
+            <div class="spot-menu">대표: 제주고사리육개장, 사골해장국, 녹두빈대떡</div>
+            <div class="place-meta">📍 제주시 서사로 11 | 매일 06:00~22:00</div>
+            <div class="map-btns">
+                <a href="https://map.naver.com/p/search/%EC%A0%9C%EC%A3%BC%20%EC%9A%B0%EC%A7%84%ED%95%B4%EC%9E%A5%EA%B5%AD" target="_blank" rel="noopener" class="btn-map btn-naver">네이버지도</a>
+                <a href="https://map.kakao.com/link/search/%EC%A0%9C%EC%A3%BC%20%EC%9A%B0%EC%A7%84%ED%95%B4%EC%9E%A5%EA%B5%AD" target="_blank" rel="noopener" class="btn-map btn-kakao">카카오맵</a>
+            </div>
+        </div>
+        
+        <div class="spot-card" data-region="jeju" data-spot-id="r4">
+            <div class="spot-top">
+                <div class="spot-badges">
+                    <span class="spot-num">04</span>
+                    <span class="badge" style="background:#E0F2FE; color:#0369A1;">제주시·공항</span>
+                    <span class="badge" style="background:#FFEBEE; color:#C62828;">고기국수</span>
+                </div>
+                <button type="button" class="fav-btn" data-fav-id="r4" aria-label="찜하기">♡ 찜</button>
+            </div>
+            <div class="place-title">자매국수 (5일차 일정 포함)</div>
+            <div class="place-desc">공항 인근에서 가장 손꼽히는 고기국수·비빔국수 맛집. 잡내 없이 진한 돼지 사골 국물과 야들야들한 수육(돔베고기) 조합이 뛰어납니다.</div>
+            <div class="spot-menu">대표: 고기국수, 비빔국수, 돔베고기</div>
+            <div class="place-meta">📍 제주시 항골남길 46 | 09:00~18:00 (수요일 휴무)</div>
+            <div class="map-btns">
+                <a href="https://map.naver.com/p/search/%EC%A0%9C%EC%A3%BC%20%EC%9E%90%EB%A7%A4%EA%B5%AD%EC%88%98" target="_blank" rel="noopener" class="btn-map btn-naver">네이버지도</a>
+                <a href="https://map.kakao.com/link/search/%EC%A0%9C%EC%A3%BC%20%EC%9E%90%EB%A7%A4%EA%B5%AD%EC%88%98" target="_blank" rel="noopener" class="btn-map btn-kakao">카카오맵</a>
+            </div>
+        </div>
+        
+        <div class="spot-card" data-region="jeju" data-spot-id="r5">
+            <div class="spot-top">
+                <div class="spot-badges">
+                    <span class="spot-num">05</span>
+                    <span class="badge" style="background:#E0F2FE; color:#0369A1;">제주시·공항</span>
+                    <span class="badge" style="background:#FFEBEE; color:#C62828;">물회·전복</span>
+                </div>
+                <button type="button" class="fav-btn" data-fav-id="r5" aria-label="찜하기">♡ 찜</button>
+            </div>
+            <div class="place-title">순옥이네명가</div>
+            <div class="place-desc">도두동 해안도로 인근의 대표 해산물 식당. 새콤달콤한 전복물회와 보글보글 끓는 전복뚝배기, 고소한 고등어구이까지 가족 메뉴가 고루 갖춰져 있습니다.</div>
+            <div class="spot-menu">대표: 순옥이네물회, 전복뚝배기, 고등어구이</div>
+            <div class="place-meta">📍 제주시 도공로 8 | 09:00~20:30 (화요일 휴무)</div>
+            <div class="map-btns">
+                <a href="https://map.naver.com/p/search/%EC%A0%9C%EC%A3%BC%20%EC%88%9C%EC%98%A5%EC%9D%B4%EB%84%A4%EB%AA%85%EA%B0%80" target="_blank" rel="noopener" class="btn-map btn-naver">네이버지도</a>
+                <a href="https://map.kakao.com/link/search/%EC%A0%9C%EC%A3%BC%20%EC%88%9C%EC%98%A5%EC%9D%B4%EB%84%A4%EB%AA%85%EA%B0%80" target="_blank" rel="noopener" class="btn-map btn-kakao">카카오맵</a>
+            </div>
+        </div>
+        
+        <div class="spot-card" data-region="seogwipo" data-spot-id="r6">
+            <div class="spot-top">
+                <div class="spot-badges">
+                    <span class="spot-num">06</span>
+                    <span class="badge" style="background:#E0F2FE; color:#0369A1;">서귀포·중문</span>
+                    <span class="badge" style="background:#FFEBEE; color:#C62828;">갈치조림·구이</span>
+                </div>
+                <button type="button" class="fav-btn" data-fav-id="r6" aria-label="찜하기">♡ 찜</button>
+            </div>
+            <div class="place-title">제주오성</div>
+            <div class="place-desc">중문 도로변에 자리한 오랜 갈치·생선 요리 로컬 맛집. 통갈치구이, 갈치조림, 고등어구이, 성게미역국 한 상 차림에 가시 손질까지 해줍니다.</div>
+            <div class="spot-menu">대표: 갈치조림 정식, 통갈치구이, 고등어구이</div>
+            <div class="place-meta">📍 서귀포시 중문관광로 27 | 매일 08:30~21:00</div>
+            <div class="map-btns">
+                <a href="https://map.naver.com/p/search/%EC%A0%9C%EC%A3%BC%EC%98%A4%EC%84%B1" target="_blank" rel="noopener" class="btn-map btn-naver">네이버지도</a>
+                <a href="https://map.kakao.com/link/search/%EC%A0%9C%EC%A3%BC%EC%98%A4%EC%84%B1" target="_blank" rel="noopener" class="btn-map btn-kakao">카카오맵</a>
+            </div>
+        </div>
+        
+        <div class="spot-card" data-region="seogwipo" data-spot-id="r7">
+            <div class="spot-top">
+                <div class="spot-badges">
+                    <span class="spot-num">07</span>
+                    <span class="badge" style="background:#E0F2FE; color:#0369A1;">서귀포·중문</span>
+                    <span class="badge" style="background:#FFEBEE; color:#C62828;">수제 돈가스</span>
+                </div>
+                <button type="button" class="fav-btn" data-fav-id="r7" aria-label="찜하기">♡ 찜</button>
+            </div>
+            <div class="place-title">연돈</div>
+            <div class="place-desc">두툼한 제주 흑돼지 등심과 모차렐라 치즈가 가득 찬 수제 돈가스로 초등학교 6학년 학생이 가장 좋아하는 메뉴 중 하나입니다.</div>
+            <div class="spot-menu">대표: 등심카츠, 치즈카츠, 수제 카레</div>
+            <div class="place-meta">📍 서귀포시 일주서로 968-10 | 12:00~20:30 (월 휴무 / 테이블링 예약)</div>
+            <div class="map-btns">
+                <a href="https://map.naver.com/p/search/%EC%A0%9C%EC%A3%BC%20%EC%97%B0%EB%8F%88" target="_blank" rel="noopener" class="btn-map btn-naver">네이버지도</a>
+                <a href="https://map.kakao.com/link/search/%EC%A0%9C%EC%A3%BC%20%EC%97%B0%EB%8F%88" target="_blank" rel="noopener" class="btn-map btn-kakao">카카오맵</a>
+            </div>
+        </div>
+        
+        <div class="spot-card" data-region="seogwipo" data-spot-id="r8">
+            <div class="spot-top">
+                <div class="spot-badges">
+                    <span class="spot-num">08</span>
+                    <span class="badge" style="background:#E0F2FE; color:#0369A1;">서귀포·중문</span>
+                    <span class="badge" style="background:#FFEBEE; color:#C62828;">서귀포 명물 김밥</span>
+                </div>
+                <button type="button" class="fav-btn" data-fav-id="r8" aria-label="찜하기">♡ 찜</button>
+            </div>
+            <div class="place-title">오는정김밥</div>
+            <div class="place-desc">고소하게 튀겨낸 유부와 특제 양념 밥이 어우러져 한 번 먹으면 계속 생각나는 서귀포 대표 김밥집. 이동 중 간식이나 피크닉 도시락으로 최고입니다.</div>
+            <div class="spot-menu">대표: 오는정김밥, 멸치김밥, 깻잎김밥</div>
+            <div class="place-meta">📍 서귀포시 동문동로 2 | 10:00~20:00 (일 휴무 / 전화 예약 필수)</div>
+            <div class="map-btns">
+                <a href="https://map.naver.com/p/search/%EC%84%9C%EA%B7%80%ED%8F%AC%20%EC%98%A4%EB%8A%94%EC%A0%95%EA%B9%80%EB%B0%A5" target="_blank" rel="noopener" class="btn-map btn-naver">네이버지도</a>
+                <a href="https://map.kakao.com/link/search/%EC%84%9C%EA%B7%80%ED%8F%AC%20%EC%98%A4%EB%8A%94%EC%A0%95%EA%B9%80%EB%B0%A5" target="_blank" rel="noopener" class="btn-map btn-kakao">카카오맵</a>
+            </div>
+        </div>
+        
+        <div class="spot-card" data-region="eastwest" data-spot-id="r9">
+            <div class="spot-top">
+                <div class="spot-badges">
+                    <span class="spot-num">09</span>
+                    <span class="badge" style="background:#E0F2FE; color:#0369A1;">동부·서부</span>
+                    <span class="badge" style="background:#FFEBEE; color:#C62828;">해녀 해산물</span>
+                </div>
+                <button type="button" class="fav-btn" data-fav-id="r9" aria-label="찜하기">♡ 찜</button>
+            </div>
+            <div class="place-title">동복리해녀촌</div>
+            <div class="place-desc">구좌읍 동복리 바다 바로 앞에서 해녀들이 채취한 신선한 해산물로 만든 회국수와 성게국수, 전복죽을 맛볼 수 있는 정겨운 로컬 맛집입니다.</div>
+            <div class="spot-menu">대표: 회국수, 성게국수, 전복죽</div>
+            <div class="place-meta">📍 제주시 구좌읍 동복로 33 | 09:30~18:00 (수요일 휴무)</div>
+            <div class="map-btns">
+                <a href="https://map.naver.com/p/search/%EC%A0%9C%EC%A3%BC%20%EB%8F%99%EB%B3%B5%EB%A6%AC%ED%95%B4%EB%85%80%EC%B4%8C" target="_blank" rel="noopener" class="btn-map btn-naver">네이버지도</a>
+                <a href="https://map.kakao.com/link/search/%EC%A0%9C%EC%A3%BC%20%EB%8F%99%EB%B3%B5%EB%A6%AC%ED%95%B4%EB%85%80%EC%B4%8C" target="_blank" rel="noopener" class="btn-map btn-kakao">카카오맵</a>
+            </div>
+        </div>
+        
+        <div class="spot-card" data-region="eastwest" data-spot-id="r10">
+            <div class="spot-top">
+                <div class="spot-badges">
+                    <span class="spot-num">10</span>
+                    <span class="badge" style="background:#E0F2FE; color:#0369A1;">동부·서부</span>
+                    <span class="badge" style="background:#FFEBEE; color:#C62828;">해물라면·문어</span>
+                </div>
+                <button type="button" class="fav-btn" data-fav-id="r10" aria-label="찜하기">♡ 찜</button>
+            </div>
+            <div class="place-title">놀맨</div>
+            <div class="place-desc">애월 한담해변 바로 앞에서 꽃게·홍합·새우가 듬뿍 들어간 시원한 해물라면을 바다를 바라보며 즐기는 대표 명소입니다.</div>
+            <div class="spot-menu">대표: 해물라면 (단일 메뉴)</div>
+            <div class="place-meta">📍 제주시 애월읍 애월로1길 24 | 10:00~15:30 (화요일 휴무)</div>
+            <div class="map-btns">
+                <a href="https://map.naver.com/p/search/%EC%95%A0%EC%9B%94%20%EB%86%80%EB%A7%A8" target="_blank" rel="noopener" class="btn-map btn-naver">네이버지도</a>
+                <a href="https://map.kakao.com/link/search/%EC%95%A0%EC%9B%94%20%EB%86%80%EB%A7%A8" target="_blank" rel="noopener" class="btn-map btn-kakao">카카오맵</a>
+            </div>
+        </div>
+        
+            </div>
+        </section>
+
+        <section class="guide-section hidden" id="cafeSection">
+            <div class="day-header">
+                <div class="day-badge" style="background:#6A1B9A;">PRETTY CAFE</div>
+                <div>
+                    <h2>제주 감성 & 예쁜 뷰 카페</h2>
+                    <div class="day-subtitle">일정 포함 카페 + 추가 선택 가능한 인기 카페 10선</div>
+                </div>
+            </div>
+            <p class="guide-intro">초6 학생과 함께 사진 찍고 쉬어가기 좋은 권역별 대표 예쁜 카페입니다.</p>
+            <div class="sub-filter-bar" data-target="cafeList">
+                <button class="sub-pill active" data-sub="all">전체 (10)</button>
+                <button class="sub-pill" data-sub="eastwest">동부·서부</button>
+                <button class="sub-pill" data-sub="seogwipo">서귀포·중문</button>
+                <button class="sub-pill" data-sub="jeju">제주시·공항</button>
+                <button class="sub-pill" data-sub="fav">❤️ 찜한 곳</button>
+            </div>
+            <div class="spot-list" id="cafeList">
+                
+        <div class="spot-card" data-region="eastwest" data-spot-id="c1">
+            <div class="spot-top">
+                <div class="spot-badges">
+                    <span class="spot-num">01</span>
+                    <span class="badge" style="background:#E0F2FE; color:#0369A1;">동부·서부</span>
+                    <span class="badge" style="background:#F3E5F5; color:#6A1B9A;">오션뷰·도넛</span>
+                </div>
+                <button type="button" class="fav-btn" data-fav-id="c1" aria-label="찜하기">♡ 찜</button>
+            </div>
+            <div class="place-title">노티드 제주 애월 (4일차 일정 포함)</div>
+            <div class="place-desc">애월 한담해변 바로 앞 야자수와 에메랄드빛 바다가 어우러진 디저트 카페. 야외 정원 포토존과 달콤한 크림 도넛 덕분에 아이와 함께 들르기 좋습니다.</div>
+            <div class="spot-menu">추천: 우유생크림 도넛, 제주 말차 도넛, 청귤 에이드</div>
+            <div class="place-meta">📍 제주시 애월읍 애월로1길 24-9 | 매일 09:00~20:00</div>
+            <div class="map-btns">
+                <a href="https://map.naver.com/p/search/%EB%85%B8%ED%8B%B0%EB%93%9C%20%EC%A0%9C%EC%A3%BC%20%EC%95%A0%EC%9B%94" target="_blank" rel="noopener" class="btn-map btn-naver">네이버지도</a>
+                <a href="https://map.kakao.com/link/search/%EB%85%B8%ED%8B%B0%EB%93%9C%20%EC%A0%9C%EC%A3%BC%20%EC%95%A0%EC%9B%94" target="_blank" rel="noopener" class="btn-map btn-kakao">카카오맵</a>
+            </div>
+        </div>
+        
+        <div class="spot-card" data-region="eastwest" data-spot-id="c2">
+            <div class="spot-top">
+                <div class="spot-badges">
+                    <span class="spot-num">02</span>
+                    <span class="badge" style="background:#E0F2FE; color:#0369A1;">동부·서부</span>
+                    <span class="badge" style="background:#F3E5F5; color:#6A1B9A;">파도·노을 뷰</span>
+                </div>
+                <button type="button" class="fav-btn" data-fav-id="c2" aria-label="찜하기">♡ 찜</button>
+            </div>
+            <div class="place-title">레이지펌프</div>
+            <div class="place-desc">옛 양어장 펌프장을 감각적으로 개조한 인더스트리얼 오션뷰 카페. 거대한 통유리창 너머로 부서지는 파도와 서쪽 바다 일몰이 그림처럼 펼쳐집니다.</div>
+            <div class="spot-menu">추천: 펌프 아인슈페너, 말차 라떼, 크루아상</div>
+            <div class="place-meta">📍 제주시 애월읍 애월북서길 32 | 매일 09:00~20:00</div>
+            <div class="map-btns">
+                <a href="https://map.naver.com/p/search/%EC%95%A0%EC%9B%94%20%EB%A0%88%EC%9D%B4%EC%A7%80%ED%8E%8C%ED%94%84" target="_blank" rel="noopener" class="btn-map btn-naver">네이버지도</a>
+                <a href="https://map.kakao.com/link/search/%EC%95%A0%EC%9B%94%20%EB%A0%88%EC%9D%B4%EC%A7%80%ED%8E%8C%ED%94%84" target="_blank" rel="noopener" class="btn-map btn-kakao">카카오맵</a>
+            </div>
+        </div>
+        
+        <div class="spot-card" data-region="eastwest" data-spot-id="c3">
+            <div class="spot-top">
+                <div class="spot-badges">
+                    <span class="spot-num">03</span>
+                    <span class="badge" style="background:#E0F2FE; color:#0369A1;">동부·서부</span>
+                    <span class="badge" style="background:#F3E5F5; color:#6A1B9A;">베이커리·루프탑</span>
+                </div>
+                <button type="button" class="fav-btn" data-fav-id="c3" aria-label="찜하기">♡ 찜</button>
+            </div>
+            <div class="place-title">하이엔드 제주 (4일차 일정 포함)</div>
+            <div class="place-desc">애월 해안 산책로와 연결된 대형 베이커리 카페. 야자수 테라스, 루프탑 포토존, 50여 종의 갓 구운 빵이 있어 3인 가족 모두 취향대로 고르기 좋습니다.</div>
+            <div class="spot-menu">추천: 현무암 크림빵, 애플망고 주스, 소금빵</div>
+            <div class="place-meta">📍 제주시 애월읍 애월북서길 56 | 매일 09:00~21:00</div>
+            <div class="map-btns">
+                <a href="https://map.naver.com/p/search/%ED%95%98%EC%9D%B4%EC%97%94%EB%93%9C%20%EC%A0%9C%EC%A3%BC" target="_blank" rel="noopener" class="btn-map btn-naver">네이버지도</a>
+                <a href="https://map.kakao.com/link/search/%ED%95%98%EC%9D%B4%EC%97%94%EB%93%9C%20%EC%A0%9C%EC%A3%BC" target="_blank" rel="noopener" class="btn-map btn-kakao">카카오맵</a>
+            </div>
+        </div>
+        
+        <div class="spot-card" data-region="eastwest" data-spot-id="c4">
+            <div class="spot-top">
+                <div class="spot-badges">
+                    <span class="spot-num">04</span>
+                    <span class="badge" style="background:#E0F2FE; color:#0369A1;">동부·서부</span>
+                    <span class="badge" style="background:#F3E5F5; color:#6A1B9A;">베이글·오션뷰</span>
+                </div>
+                <button type="button" class="fav-btn" data-fav-id="c4" aria-label="찜하기">♡ 찜</button>
+            </div>
+            <div class="place-title">런던베이글뮤지엄 제주점</div>
+            <div class="place-desc">동복리 푸른 바다를 마주한 이국적인 벽돌 건물과 빈티지 인테리어가 인상적인 카페. 쫄깃한 수제 베이글과 크림치즈 조합이 뛰어납니다.</div>
+            <div class="spot-menu">추천: 쪽파 프레첼 베이글, 감자 치즈 베이글, 양송이 수프</div>
+            <div class="place-meta">📍 제주시 구좌읍 동복로 85 | 매일 08:00~18:00</div>
+            <div class="map-btns">
+                <a href="https://map.naver.com/p/search/%EB%9F%B0%EB%8D%98%EB%B2%A0%EC%9D%B4%EA%B8%80%EB%AE%A4%EC%A7%80%EC%97%84%20%EC%A0%9C%EC%A3%BC%EC%A0%90" target="_blank" rel="noopener" class="btn-map btn-naver">네이버지도</a>
+                <a href="https://map.kakao.com/link/search/%EB%9F%B0%EB%8D%98%EB%B2%A0%EC%9D%B4%EA%B8%80%EB%AE%A4%EC%A7%80%EC%97%84%20%EC%A0%9C%EC%A3%BC%EC%A0%90" target="_blank" rel="noopener" class="btn-map btn-kakao">카카오맵</a>
+            </div>
+        </div>
+        
+        <div class="spot-card" data-region="eastwest" data-spot-id="c5">
+            <div class="spot-top">
+                <div class="spot-badges">
+                    <span class="spot-num">05</span>
+                    <span class="badge" style="background:#E0F2FE; color:#0369A1;">동부·서부</span>
+                    <span class="badge" style="background:#F3E5F5; color:#6A1B9A;">액자 오션뷰</span>
+                </div>
+                <button type="button" class="fav-btn" data-fav-id="c5" aria-label="찜하기">♡ 찜</button>
+            </div>
+            <div class="place-title">카페 한라산 (2일차 일정 포함)</div>
+            <div class="place-desc">세화 해변의 투명한 코발트빛 바다를 통창으로 액자처럼 담아낸 아늑하고 감성적인 오션뷰 카페. 조용히 바다를 보며 쉬어가기 좋습니다.</div>
+            <div class="spot-menu">추천: 한라산 슈페너, 당근 케이크, 청귤차</div>
+            <div class="place-meta">📍 제주시 구좌읍 면수1길 48 | 09:30~18:00 (수요일 휴무)</div>
+            <div class="map-btns">
+                <a href="https://map.naver.com/p/search/%EC%84%B8%ED%99%94%20%EC%B9%B4%ED%8E%98%20%ED%95%9C%EB%9D%BC%EC%82%B0" target="_blank" rel="noopener" class="btn-map btn-naver">네이버지도</a>
+                <a href="https://map.kakao.com/link/search/%EC%84%B8%ED%99%94%20%EC%B9%B4%ED%8E%98%20%ED%95%9C%EB%9D%BC%EC%82%B0" target="_blank" rel="noopener" class="btn-map btn-kakao">카카오맵</a>
+            </div>
+        </div>
+        
+        <div class="spot-card" data-region="eastwest" data-spot-id="c6">
+            <div class="spot-top">
+                <div class="spot-badges">
+                    <span class="spot-num">06</span>
+                    <span class="badge" style="background:#E0F2FE; color:#0369A1;">동부·서부</span>
+                    <span class="badge" style="background:#F3E5F5; color:#6A1B9A;">플라워·온실 정원</span>
+                </div>
+                <button type="button" class="fav-btn" data-fav-id="c6" aria-label="찜하기">♡ 찜</button>
+            </div>
+            <div class="place-title">카페 글렌코</div>
+            <div class="place-desc">넓은 야외 꽃밭과 유럽풍 유리 온실, 포토 스팟이 잘 꾸며진 정원형 카페. 가족 단위로 정원을 산책하며 예쁜 기념사진을 남기기 좋습니다.</div>
+            <div class="spot-menu">추천: 글렌코 라떼, 생과일 에이드, 수제 스콘</div>
+            <div class="place-meta">📍 제주시 구좌읍 비자림로 1202 | 매일 09:30~18:00</div>
+            <div class="map-btns">
+                <a href="https://map.naver.com/p/search/%EC%A0%9C%EC%A3%BC%20%EC%B9%B4%ED%8E%98%20%EA%B8%80%EB%A0%8C%EC%BD%94" target="_blank" rel="noopener" class="btn-map btn-naver">네이버지도</a>
+                <a href="https://map.kakao.com/link/search/%EC%A0%9C%EC%A3%BC%20%EC%B9%B4%ED%8E%98%20%EA%B8%80%EB%A0%8C%EC%BD%94" target="_blank" rel="noopener" class="btn-map btn-kakao">카카오맵</a>
+            </div>
+        </div>
+        
+        <div class="spot-card" data-region="seogwipo" data-spot-id="c7">
+            <div class="spot-top">
+                <div class="spot-badges">
+                    <span class="spot-num">07</span>
+                    <span class="badge" style="background:#E0F2FE; color:#0369A1;">서귀포·중문</span>
+                    <span class="badge" style="background:#F3E5F5; color:#6A1B9A;">산방산·바다 절경</span>
+                </div>
+                <button type="button" class="fav-btn" data-fav-id="c7" aria-label="찜하기">♡ 찜</button>
+            </div>
+            <div class="place-title">원앤온리 (3일차 일정 포함)</div>
+            <div class="place-desc">뒤로는 웅장한 산방산 절벽, 앞으로는 황우치 해변 파도가 펼쳐지는 압도적 스케일의 뷰 맛집. 3일차 마라도 잠수함 선착장과도 차로 4분 거리입니다.</div>
+            <div class="spot-menu">추천: 산방산 크림라떼, 브런치 플래터, 망고 빙수</div>
+            <div class="place-meta">📍 서귀포시 안덕면 산방로 141 | 매일 09:00~19:00</div>
+            <div class="map-btns">
+                <a href="https://map.naver.com/p/search/%EC%84%9C%EA%B7%80%ED%8F%AC%20%EC%9B%90%EC%95%A4%EC%98%A8%EB%A6%AC" target="_blank" rel="noopener" class="btn-map btn-naver">네이버지도</a>
+                <a href="https://map.kakao.com/link/search/%EC%84%9C%EA%B7%80%ED%8F%AC%20%EC%9B%90%EC%95%A4%EC%98%A8%EB%A6%AC" target="_blank" rel="noopener" class="btn-map btn-kakao">카카오맵</a>
+            </div>
+        </div>
+        
+        <div class="spot-card" data-region="seogwipo" data-spot-id="c8">
+            <div class="spot-top">
+                <div class="spot-badges">
+                    <span class="spot-num">08</span>
+                    <span class="badge" style="background:#E0F2FE; color:#0369A1;">서귀포·중문</span>
+                    <span class="badge" style="background:#F3E5F5; color:#6A1B9A;">핑크뮬리·감귤정원</span>
+                </div>
+                <button type="button" class="fav-btn" data-fav-id="c8" aria-label="찜하기">♡ 찜</button>
+            </div>
+            <div class="place-title">마노르블랑</div>
+            <div class="place-desc">산방산과 형제섬이 한눈에 내려다보이는 정원 카페. 11월에는 핑크뮬리와 감귤밭 포토존이 어우러져 가을·초겨울 감성 사진을 찍기 좋습니다.</div>
+            <div class="spot-menu">추천: 핑크뮬리 에이드, 감귤 주스, 허브티</div>
+            <div class="place-meta">📍 서귀포시 안덕면 일주서로2100번길 46 | 매일 09:00~18:30</div>
+            <div class="map-btns">
+                <a href="https://map.naver.com/p/search/%EC%84%9C%EA%B7%80%ED%8F%AC%20%EB%A7%88%EB%85%B8%EB%A5%B4%EB%B8%94%EB%9E%91" target="_blank" rel="noopener" class="btn-map btn-naver">네이버지도</a>
+                <a href="https://map.kakao.com/link/search/%EC%84%9C%EA%B7%80%ED%8F%AC%20%EB%A7%88%EB%85%B8%EB%A5%B4%EB%B8%94%EB%9E%91" target="_blank" rel="noopener" class="btn-map btn-kakao">카카오맵</a>
+            </div>
+        </div>
+        
+        <div class="spot-card" data-region="seogwipo" data-spot-id="c9">
+            <div class="spot-top">
+                <div class="spot-badges">
+                    <span class="spot-num">09</span>
+                    <span class="badge" style="background:#E0F2FE; color:#0369A1;">서귀포·중문</span>
+                    <span class="badge" style="background:#F3E5F5; color:#6A1B9A;">절벽 오션 라운지</span>
+                </div>
+                <button type="button" class="fav-btn" data-fav-id="c9" aria-label="찜하기">♡ 찜</button>
+            </div>
+            <div class="place-title">바다다</div>
+            <div class="place-desc">중문 해안 절벽 위 탁 트인 야외 데크와 빈백 소파에서 탁 트인 태평양 바다를 감상하는 리조트형 오션뷰 라운지 카페입니다.</div>
+            <div class="spot-menu">추천: 한라봉 모히토(무알코올), 아메리카노, 치즈케이크</div>
+            <div class="place-meta">📍 서귀포시 대포로 148-15 | 매일 10:00~20:00</div>
+            <div class="map-btns">
+                <a href="https://map.naver.com/p/search/%EC%A4%91%EB%AC%B8%20%EB%B0%94%EB%8B%A4%EB%8B%A4" target="_blank" rel="noopener" class="btn-map btn-naver">네이버지도</a>
+                <a href="https://map.kakao.com/link/search/%EC%A4%91%EB%AC%B8%20%EB%B0%94%EB%8B%A4%EB%8B%A4" target="_blank" rel="noopener" class="btn-map btn-kakao">카카오맵</a>
+            </div>
+        </div>
+        
+        <div class="spot-card" data-region="jeju" data-spot-id="c10">
+            <div class="spot-top">
+                <div class="spot-badges">
+                    <span class="spot-num">10</span>
+                    <span class="badge" style="background:#E0F2FE; color:#0369A1;">제주시·공항</span>
+                    <span class="badge" style="background:#F3E5F5; color:#6A1B9A;">감성 푸딩·원도심</span>
+                </div>
+                <button type="button" class="fav-btn" data-fav-id="c10" aria-label="찜하기">♡ 찜</button>
+            </div>
+            <div class="place-title">우무 (제주 관덕로점 · 1일차 포함)</div>
+            <div class="place-desc">제주 해녀가 채취한 우뭇가사리로 만든 탱글탱글한 커스터드·말차 푸딩 전문점. 숙소(오션스위츠)에서 도보 12분 거리로 가볍게 들르기 좋습니다.</div>
+            <div class="spot-menu">추천: 커스터드 푸딩, 말차 푸딩, 우도 땅콩 푸딩</div>
+            <div class="place-meta">📍 제주시 관덕로8길 40-1 | 매일 09:00~20:00</div>
+            <div class="map-btns">
+                <a href="https://map.naver.com/p/search/%EC%A0%9C%EC%A3%BC%20%EC%9A%B0%EB%AC%B4%20%EA%B4%80%EB%8D%95%EB%A1%9C%EC%A0%90" target="_blank" rel="noopener" class="btn-map btn-naver">네이버지도</a>
+                <a href="https://map.kakao.com/link/search/%EC%A0%9C%EC%A3%BC%20%EC%9A%B0%EB%AC%B4%20%EA%B4%80%EB%8D%95%EB%A1%9C%EC%A0%90" target="_blank" rel="noopener" class="btn-map btn-kakao">카카오맵</a>
+            </div>
+        </div>
+        
+            </div>
+        </section>
+
+        <section class="checklist-card" id="checklistSection">
+            <h2>✅ 출발 전 & 현지 필수 체크리스트</h2>
+            <label class="check-item"><input type="checkbox" data-key="c1"><span><strong>전원 신분증 지참:</strong> 항공기 및 마라도 잠수함 탑승용 (성인: 신분증 / 초6 학생: 주민등록등본·가족관계증명서·여권 중 택1)</span></label>
+            <label class="check-item"><input type="checkbox" data-key="c2"><span><strong>마라도 잠수함 사전 예약:</strong> 3일차(11/24 화) 14:00 항차 예약 및 당일 오전 운항 여부 전화 확인</span></label>
+            <label class="check-item"><input type="checkbox" data-key="c3"><span><strong>멀미약 준비:</strong> 잠수함 선착장 이동 수송선 탑승 30분 전 복용</span></label>
+            <label class="check-item"><input type="checkbox" data-key="c4"><span><strong>방풍 외투 준비:</strong> 11월 하순 제주 바닷바람 대비 경량 패딩 또는 바람막이</span></label>
+            <label class="check-item"><input type="checkbox" data-key="c5"><span><strong>맛집 원격 줄서기 확인:</strong> 숙성도·수우동·우진해장국 방문 전 대기 앱 확인</span></label>
+        </section>
+    </main>
+</div>
+
+<script>
+    const tabBtns = document.querySelectorAll('.tab-btn');
+    const daySections = document.querySelectorAll('.day-section');
+    const foodSection = document.getElementById('foodSection');
+    const cafeSection = document.getElementById('cafeSection');
+    const checklistSection = document.getElementById('checklistSection');
+
+    tabBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            tabBtns.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            const filter = btn.dataset.filter;
+
+            daySections.forEach(sec => sec.classList.add('hidden'));
+            foodSection.classList.add('hidden');
+            cafeSection.classList.add('hidden');
+            checklistSection.classList.add('hidden');
+
+            if (filter === 'all') {
+                daySections.forEach(sec => sec.classList.remove('hidden'));
+                checklistSection.classList.remove('hidden');
+            } else if (filter === 'food') {
+                foodSection.classList.remove('hidden');
+            } else if (filter === 'cafe') {
+                cafeSection.classList.remove('hidden');
+            } else if (filter === 'check') {
+                checklistSection.classList.remove('hidden');
+            } else {
+                daySections.forEach(sec => {
+                    if (sec.dataset.day === filter) sec.classList.remove('hidden');
+                });
+            }
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    });
+
+    const favStorageKey = 'jeju_trip_v5_favs';
+    let savedFavs = JSON.parse(localStorage.getItem(favStorageKey) || '{}');
+
+    function updateFavUI() {
+        document.querySelectorAll('.fav-btn').forEach(btn => {
+            const id = btn.dataset.favId;
+            if (savedFavs[id]) {
+                btn.classList.add('saved');
+                btn.textContent = '♥ 찜완료';
+            } else {
+                btn.classList.remove('saved');
+                btn.textContent = '♡ 찜';
+            }
+        });
+    }
+    updateFavUI();
+
+    document.querySelectorAll('.fav-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const id = btn.dataset.favId;
+            if (savedFavs[id]) {
+                delete savedFavs[id];
+            } else {
+                savedFavs[id] = true;
+            }
+            localStorage.setItem(favStorageKey, JSON.stringify(savedFavs));
+            updateFavUI();
+        });
+    });
+
+    document.querySelectorAll('.sub-filter-bar').forEach(bar => {
+        const targetList = document.getElementById(bar.dataset.target);
+        const pills = bar.querySelectorAll('.sub-pill');
+        pills.forEach(pill => {
+            pill.addEventListener('click', () => {
+                pills.forEach(p => p.classList.remove('active'));
+                pill.classList.add('active');
+                const sub = pill.dataset.sub;
+                targetList.querySelectorAll('.spot-card').forEach(card => {
+                    if (sub === 'all') {
+                        card.classList.remove('hidden');
+                    } else if (sub === 'fav') {
+                        card.classList.toggle('hidden', !savedFavs[card.dataset.spotId]);
+                    } else {
+                        card.classList.toggle('hidden', card.dataset.region !== sub);
+                    }
+                });
+            });
+        });
+    });
+
+    document.querySelectorAll('.check-item input').forEach(box => {
+        const key = 'jeju_trip_v5_' + box.dataset.key;
+        if (localStorage.getItem(key) === '1') {
+            box.checked = true;
+            box.parentElement.classList.add('checked');
+        }
+        box.addEventListener('change', () => {
+            localStorage.setItem(key, box.checked ? '1' : '0');
+            box.parentElement.classList.toggle('checked', box.checked);
+        });
+    });
+</script>
+</body>
+</html>

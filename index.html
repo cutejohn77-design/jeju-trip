@@ -241,6 +241,7 @@
     }
     .map-btns {
         display: flex;
+        flex-wrap: wrap;
         gap: 8px;
     }
     .btn-map {
@@ -264,6 +265,25 @@
     .btn-kakao {
         background: #FEE500;
         color: #191919;
+    }
+    .option-box {
+        margin-top: 10px;
+        padding: 10px 11px;
+        background: #F8FAFC;
+        border: 1px dashed #CBD5E1;
+        border-radius: 10px;
+    }
+    .option-title {
+        font-size: 0.77rem;
+        font-weight: 800;
+        color: var(--ocean);
+        margin-bottom: 5px;
+    }
+    .option-desc {
+        font-size: 0.8rem;
+        color: #374151;
+        margin-bottom: 8px;
+        line-height: 1.45;
     }
     .next-move-connector {
         margin: 12px 0 14px;
@@ -1062,7 +1082,7 @@
             <div class="day-badge">DAY 5</div>
             <div>
                 <h2>11월 26일 (목)</h2>
-                <div class="day-subtitle">한라수목원 · 동문시장 쇼핑 · 자매국수 · 무지개해안도로 카페 · 귀가</div>
+                <div class="day-subtitle">한라수목원 · 동문시장 쇼핑 · 자매국수(해녀맛집 옵션) · 무지개해안도로 · 귀가</div>
             </div>
         </div>
         <div class="transport-bar">🚗 렌터카 반납 (14:30) → 16:40 제주 출발</div>
@@ -1143,6 +1163,19 @@
                 <a href="https://map.naver.com/p/search/%EC%A0%9C%EC%A3%BC%20%EC%9E%90%EB%A7%A4%EA%B5%AD%EC%88%98" target="_blank" rel="noopener" class="btn-map btn-naver">네이버지도</a>
                 <a href="https://map.kakao.com/link/search/%EC%A0%9C%EC%A3%BC%20%EC%9E%90%EB%A7%A4%EA%B5%AD%EC%88%98" target="_blank" rel="noopener" class="btn-map btn-kakao">카카오맵</a>
             </div>
+            <div class="option-box">
+                <div class="option-title">💡 공항 인근 해녀 맛집 선택 옵션 (해산물 선호 시)</div>
+                <div class="option-desc">
+                    <strong>① 도두해녀의집</strong> · 무지개해안도로 바로 옆 (전복죽·특전복물회·성게미역국)<br>
+                    <strong>② 해녀잠수촌</strong> · 용담해안도로 오션뷰 (성게국수·회국수·전복죽)
+                </div>
+                <div class="map-btns">
+                    <a href="https://map.naver.com/p/search/%EB%8F%84%EB%91%90%ED%95%B4%EB%85%80%EC%9D%98%EC%A7%91" target="_blank" rel="noopener" class="btn-map btn-naver">도두해녀의집 네이버</a>
+                    <a href="https://map.kakao.com/link/search/%EB%8F%84%EB%91%90%ED%95%B4%EB%85%80%EC%9D%98%EC%A7%91" target="_blank" rel="noopener" class="btn-map btn-kakao">카카오</a>
+                    <a href="https://map.naver.com/p/search/%EC%A0%9C%EC%A3%BC%20%ED%95%B4%EB%85%80%EC%9E%A0%EC%88%98%EC%B4%8C" target="_blank" rel="noopener" class="btn-map btn-naver">해녀잠수촌 네이버</a>
+                    <a href="https://map.kakao.com/link/search/%EC%A0%9C%EC%A3%BC%20%ED%95%B4%EB%85%80%EC%9E%A0%EC%88%98%EC%B4%8C" target="_blank" rel="noopener" class="btn-map btn-kakao">카카오</a>
+                </div>
+            </div>
             
             <div class="next-move-connector">
                 <div class="next-move-pill" style="background:#E8F0FE; color:#1967D2; border-color:#D2E3FC;">
@@ -1201,12 +1234,12 @@
                 <div class="day-badge" style="background:#D84315;">BEST FOOD</div>
                 <div>
                     <h2>제주 가면 꼭 가야 할 최고 맛집</h2>
-                    <div class="day-subtitle">일정 포함 맛집 + 추가 선택 가능한 제주 대표 10선</div>
+                    <div class="day-subtitle">일정 포함 맛집 + 추가 선택 가능한 제주 대표 12선</div>
                 </div>
             </div>
             <p class="guide-intro">권역별 버튼을 눌러 현재 위치 근처 맛집을 바로 찾거나, 마음에 드는 곳을 <strong>♡ 찜</strong> 해두세요.</p>
             <div class="sub-filter-bar" data-target="foodList">
-                <button class="sub-pill active" data-sub="all">전체 (10)</button>
+                <button class="sub-pill active" data-sub="all">전체 (12)</button>
                 <button class="sub-pill" data-sub="jeju">제주시·공항</button>
                 <button class="sub-pill" data-sub="seogwipo">서귀포·중문</button>
                 <button class="sub-pill" data-sub="eastwest">동부·서부</button>
@@ -1308,11 +1341,49 @@
                 <a href="https://map.kakao.com/link/search/%EC%A0%9C%EC%A3%BC%20%EC%88%9C%EC%98%A5%EC%9D%B4%EB%84%A4%EB%AA%85%EA%B0%80" target="_blank" rel="noopener" class="btn-map btn-kakao">카카오맵</a>
             </div>
         </div>
+
+        <div class="spot-card" data-region="jeju" data-spot-id="r11">
+            <div class="spot-top">
+                <div class="spot-badges">
+                    <span class="spot-num">06</span>
+                    <span class="badge" style="background:#E0F2FE; color:#0369A1;">제주시·공항</span>
+                    <span class="badge" style="background:#FFEBEE; color:#C62828;">해녀 전복죽·물회</span>
+                </div>
+                <button type="button" class="fav-btn" data-fav-id="r11" aria-label="찜하기">♡ 찜</button>
+            </div>
+            <div class="place-title">도두해녀의집 (5일차 점심 옵션)</div>
+            <div class="place-desc">제주공항에서 차로 약 7~10분, 도두동 무지개해안도로 바로 옆 해녀 맛집. 진한 전복죽과 성게미역국이 있어 초6 아드님과 함께 식사하기 좋습니다.</div>
+            <div class="spot-menu">대표: 전복죽, 특전복물회, 성게미역국</div>
+            <div class="place-meta">📍 제주시 도두항서길 16 (무지개해안도로 인근)</div>
+            <div class="map-btns">
+                <a href="https://map.naver.com/p/search/%EB%8F%84%EB%91%90%ED%95%B4%EB%85%80%EC%9D%98%EC%A7%91" target="_blank" rel="noopener" class="btn-map btn-naver">네이버지도</a>
+                <a href="https://map.kakao.com/link/search/%EB%8F%84%EB%91%90%ED%95%B4%EB%85%80%EC%9D%98%EC%A7%91" target="_blank" rel="noopener" class="btn-map btn-kakao">카카오맵</a>
+            </div>
+        </div>
+
+        <div class="spot-card" data-region="jeju" data-spot-id="r12">
+            <div class="spot-top">
+                <div class="spot-badges">
+                    <span class="spot-num">07</span>
+                    <span class="badge" style="background:#E0F2FE; color:#0369A1;">제주시·공항</span>
+                    <span class="badge" style="background:#FFEBEE; color:#C62828;">해녀 성게·회국수</span>
+                </div>
+                <button type="button" class="fav-btn" data-fav-id="r12" aria-label="찜하기">♡ 찜</button>
+            </div>
+            <div class="place-title">해녀잠수촌 (5일차 점심 옵션)</div>
+            <div class="place-desc">용담해안도로변에 위치해 공항과 오션스위츠 호텔 모두에서 차로 5~7분 거리인 로컬 맛집. 바다를 보며 성게국수·전복죽을 즐기기 좋습니다.</div>
+            <div class="spot-menu">대표: 성게국수, 회국수, 전복죽, 소라구이</div>
+            <div class="place-meta">📍 제주시 서해안로 518 (용담해안도로)</div>
+            <div class="map-btns">
+                <a href="https://map.naver.com/p/search/%EC%A0%9C%EC%A3%BC%20%ED%95%B4%EB%85%80%EC%9E%A0%EC%88%98%EC%B4%8C" target="_blank" rel="noopener" class="btn-map btn-naver">네이버지도</a>
+                <a href="https://map.kakao.com/link/search/%EC%A0%9C%EC%A3%BC%20%ED%95%B4%EB%85%80%EC%9E%A0%EC%88%98%EC%B4%8C" target="_blank" rel="noopener" class="btn-map btn-kakao">카카오맵</a>
+            </div>
+        </div>
         
         <div class="spot-card" data-region="seogwipo" data-spot-id="r6">
             <div class="spot-top">
                 <div class="spot-badges">
-                    <span class="spot-num">06</span>
+                    <span class="spot-num">08</span>
                     <span class="badge" style="background:#E0F2FE; color:#0369A1;">서귀포·중문</span>
                     <span class="badge" style="background:#FFEBEE; color:#C62828;">갈치조림·구이</span>
                 </div>
@@ -1331,7 +1402,7 @@
         <div class="spot-card" data-region="seogwipo" data-spot-id="r7">
             <div class="spot-top">
                 <div class="spot-badges">
-                    <span class="spot-num">07</span>
+                    <span class="spot-num">09</span>
                     <span class="badge" style="background:#E0F2FE; color:#0369A1;">서귀포·중문</span>
                     <span class="badge" style="background:#FFEBEE; color:#C62828;">수제 돈가스</span>
                 </div>
@@ -1350,7 +1421,7 @@
         <div class="spot-card" data-region="seogwipo" data-spot-id="r8">
             <div class="spot-top">
                 <div class="spot-badges">
-                    <span class="spot-num">08</span>
+                    <span class="spot-num">10</span>
                     <span class="badge" style="background:#E0F2FE; color:#0369A1;">서귀포·중문</span>
                     <span class="badge" style="background:#FFEBEE; color:#C62828;">서귀포 명물 김밥</span>
                 </div>
@@ -1369,7 +1440,7 @@
         <div class="spot-card" data-region="eastwest" data-spot-id="r9">
             <div class="spot-top">
                 <div class="spot-badges">
-                    <span class="spot-num">09</span>
+                    <span class="spot-num">11</span>
                     <span class="badge" style="background:#E0F2FE; color:#0369A1;">동부·서부</span>
                     <span class="badge" style="background:#FFEBEE; color:#C62828;">해녀 해산물</span>
                 </div>
@@ -1388,7 +1459,7 @@
         <div class="spot-card" data-region="eastwest" data-spot-id="r10">
             <div class="spot-top">
                 <div class="spot-badges">
-                    <span class="spot-num">10</span>
+                    <span class="spot-num">12</span>
                     <span class="badge" style="background:#E0F2FE; color:#0369A1;">동부·서부</span>
                     <span class="badge" style="background:#FFEBEE; color:#C62828;">해물라면·문어</span>
                 </div>
